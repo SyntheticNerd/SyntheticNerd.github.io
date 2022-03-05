@@ -92,7 +92,7 @@ export const NavLink = styled.button`
   }
 `;
 
-export const NavIcon = styled.a`
+export const NavIcon = styled.button`
   position: relative;
   background: none;
   display: flex;
