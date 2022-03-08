@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import MyRouter from "./Router";
+import { CSSVariables } from "./components/StyledComponents";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyRouter />
+    <CSSVariables>
+      <MyRouter />
+    </CSSVariables>
   </React.StrictMode>,
   document.getElementById("root")
 );

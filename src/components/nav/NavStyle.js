@@ -9,8 +9,9 @@ export const NavBarCont = styled.nav`
   align-items: center;
   height: 4em;
   padding: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 16px;
+  z-index: 4;
 `;
 
 export const NavFolder = styled.div`

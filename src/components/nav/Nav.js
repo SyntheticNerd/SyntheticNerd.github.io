@@ -12,12 +12,12 @@ import {
   Line3,
   TabIndicator,
   LogoIcon,
-} from "../styles/NavStyle";
-import { ReactComponent as LinkedinIcon } from "../icons/linkedinIcon.svg";
-import { ReactComponent as BehanceIcon } from "../icons/behanceIcon.svg";
-import { ReactComponent as GithubIcon } from "../icons/gitHubIcon.svg";
-import { ReactComponent as BlankIcon } from "../icons/blankIcon.svg";
-import { ReactComponent as LanternIcon } from "../icons/lantern_icon_gold_elipse.svg";
+} from "./NavStyle";
+import { ReactComponent as LinkedinIcon } from "../../icons/linkedinIcon.svg";
+import { ReactComponent as BehanceIcon } from "../../icons/behanceIcon.svg";
+import { ReactComponent as GithubIcon } from "../../icons/gitHubIcon.svg";
+import { ReactComponent as BlankIcon } from "../../icons/blankIcon.svg";
+import { ReactComponent as LanternIcon } from "../../icons/lantern_icon_gold_elipse.svg";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -49,7 +49,9 @@ export default function Nav() {
             <NavLink onClick={() => navigate("/portfolio")}>
               Portfolio
               <TabIndicator
-                currentTab={location.pathname === "/portfolio" ? true : false}
+                currentTab={
+                  location.pathname.includes("portfolio") ? true : false
+                }
               />
             </NavLink>
           </LinkCont>
@@ -57,7 +59,7 @@ export default function Nav() {
             <NavLink onClick={() => navigate("/about")}>
               About
               <TabIndicator
-                currentTab={location.pathname === "/about" ? true : false}
+                currentTab={location.pathname.includes("about") ? true : false}
               />
             </NavLink>
           </LinkCont>
@@ -65,7 +67,9 @@ export default function Nav() {
             <NavLink onClick={() => navigate("/contact")}>
               Contact
               <TabIndicator
-                currentTab={location.pathname === "/contact" ? true : false}
+                currentTab={
+                  location.pathname.includes("contact") ? true : false
+                }
               />
             </NavLink>
           </LinkCont>
