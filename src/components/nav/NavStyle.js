@@ -230,6 +230,6 @@ export const TabIndicator = styled.div`
     left: 0px;
     bottom: 0px;
     transform: ${(props) =>
-      props.currentTab ? `translateX(0px)` : `translateY(100%)`};
+      props.currentTab ? `translateX(0px)` : `translateY(110%)`};
   }
 `;
