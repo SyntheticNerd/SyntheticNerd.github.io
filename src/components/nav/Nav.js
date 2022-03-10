@@ -26,9 +26,6 @@ export default function Nav() {
   let navigate = useNavigate();
   let location = useLocation();
 
-  useEffect(() => {
-    console.log(location.pathname);
-  });
   return (
     <NavBarCont navModal={navModal}>
       <LogoIcon>

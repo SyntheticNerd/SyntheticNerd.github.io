@@ -3,11 +3,18 @@ import styled from "styled-components";
 export const SinglePriceCont = styled.div`
   font-family: sans-serif;
   --brand-color: #bfdf32;
+  --brand-act: #1e7e7c;
+  --brand-pass: #348585;
+  --background-primary: #333333;
+  --background-secondary: #f0f0f0;
+  --text-primary: rgba(255, 255, 255, 0.5);
+  /* --brand-color: #bfdf32;
   --brand-act: #2bb3b1;
   --brand-pass: #4abebd;
   --background-primary: #ffffff;
   --background-secondary: #f0f0f0;
-  --text-primary: rgba(0, 0, 0, 0.3);
+  --text-primary: rgba(0, 0, 0, 0.3); */
+  --text-brand-primary: #2bb3b1;
   --text-white-primary: rgba(255, 255, 255, 0.8);
   --text-white-inactive: rgba(255, 255, 255, 0.5);
   flex-grow: 1;
@@ -26,11 +33,19 @@ export const SignUpBanner = styled.div`
   margin: 32px auto;
   background-color: var(--background-primary);
   overflow: hidden;
+  @media (max-width: 699px) {
+    width: 90%;
+    height: fit-content;
+    margin: 32px auto;
+  }
 `;
 
 export const FlexCont = styled.div`
   display: flex;
   height: 50%;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 export const JoinUsCont = styled.div`
@@ -47,13 +62,17 @@ export const Cont = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   background-color: ${(props) => (props.bgColor ? props.bgColor : "#ffffff")};
+  @media (max-width: 500px) {
+    width: 100%;
+    min-height: 300px;
+  }
 `;
 
 export const Header1 = styled.h1`
   font-size: 1.7rem;
-  color: var(--brand-act);
+  color: var(--text-brand-primary);
   letter-spacing: 2px;
   margin-bottom: 1.5vw;
 `;
@@ -80,7 +99,7 @@ export const Price = styled.span`
 `;
 export const SpanStd = styled.span`
   color: var(--text-white-inactive);
-  margin: 2px;
+  margin: 8px 0px;
 `;
 export const ParaStd = styled.p`
   color: var(--text-white-primary);

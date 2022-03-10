@@ -9,7 +9,7 @@ export default function InfoCard({ borderColor, header, text, img }) {
       <FeatureImg
         src={process.env.PUBLIC_URL + img}
         alt='Supervisor Icon'
-        class='main-img'
+        className='main-img'
       />
     </CardCont>
   );

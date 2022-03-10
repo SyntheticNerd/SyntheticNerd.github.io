@@ -11,7 +11,7 @@ export const NavBarCont = styled.nav`
   padding: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 16px;
-  z-index: 4;
+  z-index: 5;
 `;
 
 export const NavFolder = styled.div`
@@ -35,6 +35,8 @@ export const LinkList = styled.ul`
     justify-content: flex-start;
     background: #1e1e1e;
     transition: transform 0.5s;
+    box-shadow: -4px 6px 8px rgba(0, 0, 0, 0.5);
+
     ${(props) =>
       props.navModal
         ? "transform: translateX(0%);"
@@ -118,7 +120,7 @@ export const LogoIcon = styled.div`
   height: fit-content;
   width: fit-content;
   position: relative;
-  margin: 16px;
+  margin: 6px 16px 0px;
   border-radius: 50%;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.8);
   transition: all 0.2s;
@@ -211,7 +213,7 @@ export const TabIndicator = styled.div`
   position: absolute;
   height: 1px;
   width: 100%;
-  bottom: 0px;
+  bottom: 2px;
   transform: ${(props) =>
     props.currentTab ? `translateX(-8px)` : `translateX(100%)`};
   background: linear-gradient(
@@ -222,4 +224,12 @@ export const TabIndicator = styled.div`
     #fbf5b7 63.91%,
     #aa771c 100%
   );
+  @media (max-width: 700px) {
+    height: 100%;
+    width: 1px;
+    left: 0px;
+    bottom: 0px;
+    transform: ${(props) =>
+      props.currentTab ? `translateX(0px)` : `translateY(100%)`};
+  }
 `;

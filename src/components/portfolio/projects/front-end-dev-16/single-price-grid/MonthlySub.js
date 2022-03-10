@@ -10,9 +10,9 @@ import {
 
 export default function MonthlySub() {
   return (
-    <Cont bgColor='#2bb3b1'>
+    <Cont bgColor='var(--brand-act)'>
       <Header2>Monthly Subscription</Header2>
-      <div style={{ marginTop: "-2em" }}>
+      <div style={{ marginBottom: "1em" }}>
         <div>
           <Price>$29</Price>
           <SpanStd>per month</SpanStd>
