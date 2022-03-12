@@ -1,9 +1,13 @@
+import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Carousel,
   LgCard,
   FullPreview,
   LinkText,
+  ArrowBtn,
+  TagBox,
+  Tag,
 } from "../../../StyledComponents";
 import SinglePriceGrid from "./single-price-grid/SinglePriceGrid";
 import ProfileCard1 from "./profile-card-1/ProfileCard1";
@@ -11,6 +15,10 @@ import FourCardFeature from "./four-card-feature/FourCardFeature";
 import TestimonialGrid from "./testimonials-grid/TestimonialGrid";
 import BaseApparel from "./base-apperal/BaseApparel";
 import { ThemeProvider } from "styled-components";
+import { ReactComponent as BlankIcon } from "../../../../icons/blankIcon.svg";
+import { ReactComponent as ArrowRight } from "../../../../icons/arrowRight.svg"
+import { ReactComponent as ArrowLeft } from "../../../../icons/arrowLeft.svg"
+import React from "react";
 
 // const linkStyle = {
 //   height: "100%",
@@ -24,30 +32,35 @@ const links = [
     path: "singlePriceGrid",
     component: <SinglePriceGrid />,
     scale: 0.3,
+    tags: ["Responsive", "Dark Theme"]
   },
   {
     name: "Four Card Feature",
     path: "fourCardFeature",
     component: <FourCardFeature />,
     scale: 0.2,
+    tags: ["Responsive", "Dark Theme", "Interactive"]
   },
   {
     name: "Base Apparel",
     path: "baseApparel",
     component: <BaseApparel />,
     scale: 0.19,
+    tags: ["Responsive", "Interactive"]
   },
   {
     name: "Profile Card",
     path: "profileCard1",
     component: <ProfileCard1 />,
     scale: 0.3,
+    tags: []
   },
   {
     name: "Testimonial's Grid",
     path: "testimonialsGrid",
     component: <TestimonialGrid />,
     scale: 0.3,
+    tags: []
   },
 ];
 
@@ -56,12 +69,28 @@ const theme = {
 };
 
 export default function FrontEndDev() {
+  const scrollArea = useRef(null);
+  const moveArrRight = () => {
+    const scrollWidth = scrollArea.current.offsetWidth * 0.67;
+    scrollArea.current.scrollLeft += scrollWidth;
+  };
+  const moveArrLeft = () => {
+    const scrollWidth = scrollArea.current.offsetWidth * 0.67;
+    scrollArea.current.scrollLeft -= scrollWidth;
+  };
   return (
-    <>
-      <Carousel>
+    <div style={{ position: "relative" }}>
+      <ArrowBtn direction='left' onClick={moveArrLeft}>
+        <BlankIcon />
+        <i><ArrowLeft /></i>
+      </ArrowBtn>
+      <Carousel ref={scrollArea}>
         {links.map((link, index) => (
           <NavLink key={index} to={link.path} exact activeClassName='current'>
             <LinkText>{link.name}</LinkText>
+            <TagBox>{link.tags.map((tag, index)=>(
+              <Tag>{tag}</Tag>
+            ))}</TagBox>
             <LgCard>
               <FullPreview scale={link.scale}>
                 <ThemeProvider theme={theme}>{link.component}</ThemeProvider>
@@ -70,6 +99,10 @@ export default function FrontEndDev() {
           </NavLink>
         ))}
       </Carousel>
-    </>
+      <ArrowBtn direction='right' onClick={moveArrRight}>
+        <BlankIcon />
+        <i><ArrowRight /></i>
+      </ArrowBtn>
+    </div>
   );
 }

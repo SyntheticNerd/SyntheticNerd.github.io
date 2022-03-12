@@ -54,15 +54,13 @@ export const ComingSoon = styled.div`
 
 export const HeroImg = styled.div`
   background: url(${({ backgroundImgDesk }) => `${backgroundImgDesk}`})
-    center/cover no-repeat;
+    top/cover no-repeat;
   opacity: 90%;
   grid-column: 2 / 3;
   grid-row: 1 / 6;
   ${({ theme }) =>
     !theme.preview &&
     `@media (max-width: 900px) {
-    background: url(${({ backgroundImgMob }) => `${backgroundImgMob}`})
-      top/cover no-repeat;
     grid-column: 1 / 2;
     grid-row: 2 /3;
   }`}
@@ -75,7 +73,7 @@ export const Logo = styled.img`
   ${({ theme }) =>
     !theme.preview &&
     ` @media (max-width: 900px) {
-    width: 6rem;
+    width: 7rem;
     margin: auto var(--main-margin);
   }`}
 `;

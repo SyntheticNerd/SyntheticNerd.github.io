@@ -45,10 +45,11 @@ export const SignUpBanner = styled.div`
 export const FlexCont = styled.div`
   display: flex;
   height: 50%;
-  ${({ theme }) => !theme.preview && ``}
-  @media (max-width: 500px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 500px) {
     flex-direction: column;
-  }
+  }`}
 `;
 
 export const JoinUsCont = styled.div`

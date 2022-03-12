@@ -9,7 +9,9 @@ export const CSSVariables = styled.div`
     #aa771c 100%
   );
   --elevation2: #1e1e1e;
+  --elevation3: #2c2c2c;
   --shadow1: rgba(0, 0, 0, 0.5);
+  --fontHighEmp: rgba(255, 255, 255, 0.88);
 `;
 
 export const Goldh1 = styled.h1`
@@ -36,8 +38,9 @@ export const Carousel = styled.ul`
   list-style-type: none;
   display: flex;
   width: 100%;
-  padding-left: 64px;
+  padding: 0px 68px;
   overflow-x: scroll;
+  scroll-behavior: smooth;
   /* Hide scrollbar for Chrome, Safari and Opera */
   &:-webkit-scrollbar {
     display: none;
@@ -48,6 +51,10 @@ export const Carousel = styled.ul`
     text-decoration: none;
     color: white;
     position: relative;
+    @media (max-width: 900px) {
+      scale: 0.8;
+      margin: 0px -40px;
+    }
   }
 `;
 
@@ -60,12 +67,21 @@ export const LgCard = styled.li`
   align-items: center;
   justify-content: center;
   opacity: 0.2;
-  transition: opacity 0.3s, scale 0.3s;
+  transition: all 0.3s, scale 0.3s;
   box-shadow: 0px 4px 4px var(--shadow1);
-  z-index: 1;
+  z-index: 1;  
   &:hover {
     opacity: 1;
     scale: 1.05;
+    &:after{
+      content:'';
+      width: 100%;
+      height: 2em;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      position: absolute;
+      opacity: 1;
+    }
   }
 `;
 
@@ -86,7 +102,62 @@ export const LinkText = styled.p`
   width: 100%;
 `;
 
+export const ArrowBtn = styled.button`
+  border: none;
+  display: flex;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+  transition: all 0.1s;
+  margin: 0px 8px;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  ${({ direction }) => direction}: 8px;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.8);
+    scale: 1.1;
+  }
+  svg{
+    position: absolute;
+  }
+  i{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ${({ direction }) => direction}: 45%;
+  }
+`;
+
 export const FullPreview = styled.div`
   scale: ${({ scale }) => (scale ? scale : "0.5")};
+  pointer-events: none;
+`;
+
+export const TagBox = styled.div`
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  bottom: 0;
+  padding: 32px;
+  width: 100%;
+`;
+
+export const Tag = styled.p`
+  margin: 4px;
+  z-index: 1;
+  background-color: var(--elevation3);
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--fontHighEmp);
   pointer-events: none;
 `;

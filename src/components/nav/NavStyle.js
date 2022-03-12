@@ -86,7 +86,7 @@ export const NavLink = styled.button`
   @media (max-width: 700px) {
     width: 100%;
     height: 4rem;
-    margin: 8px 0;
+    margin: 8px 0px;
   }
 
   &:hover {
@@ -95,7 +95,7 @@ export const NavLink = styled.button`
   }
 `;
 
-export const NavIcon = styled.button`
+export const NavIcon = styled.a`
   position: relative;
   background: none;
   display: flex;
@@ -105,8 +105,8 @@ export const NavIcon = styled.button`
   border: none;
   border-radius: 50%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
-  height: 3em;
-  width: 3em;
+  height: calc(3em - 8px);
+  width: calc(3em - 8px);
   margin: 0px 8px;
   transition: all 0.2s;
   cursor: pointer;
@@ -131,8 +131,8 @@ export const LogoIcon = styled.div`
 `;
 
 export const SandwichIcon = styled.button`
-  display: none;
-  position: relative;
+  display: auto;
+  position: absolute;
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -141,8 +141,12 @@ export const SandwichIcon = styled.button`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
   transition: all 0.1s;
   margin: 0px 8px;
+  opacity: 0;
+  pointer-events: none;
   @media (max-width: 700px) {
-    display: inline-block;
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
   }
   &:hover {
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.8);
