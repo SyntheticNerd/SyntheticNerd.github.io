@@ -12,6 +12,7 @@ export const CSSVariables = styled.div`
   --elevation3: #2c2c2c;
   --shadow1: rgba(0, 0, 0, 0.5);
   --fontHighEmp: rgba(255, 255, 255, 0.88);
+  --fontMedEmp: rgba(255, 255, 255, 0.75);
 `;
 
 export const Goldh1 = styled.h1`
@@ -77,7 +78,7 @@ export const LgCard = styled.li`
       content:'';
       width: 100%;
       height: 2em;
-      background-color: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.27) 18.79%, rgba(0, 0, 0, 0.41) 37.78%, rgba(0, 0, 0, 0.4) 62.5%, rgba(0, 0, 0, 0.27) 79.75%, rgba(0, 0, 0, 0) 100%);
       z-index: 1;
       position: absolute;
       opacity: 1;
@@ -158,6 +159,6 @@ export const Tag = styled.p`
   border-radius: 2px;
   font-size: 13px;
   font-weight: 300;
-  color: var(--fontHighEmp);
+  color: var(--fontMedEmp);
   pointer-events: none;
 `;
