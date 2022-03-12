@@ -12,6 +12,7 @@ export const BALandingPage = styled.div`
   --p-size: 16px;
 
   height: 100vh;
+  width: 1440px;
   background-image: linear-gradient(var(--background-gradient));
   background-size: 66% 100%;
   color: black;
@@ -19,12 +20,16 @@ export const BALandingPage = styled.div`
   text-align: left;
   scale: 0.9;
   font-family: "Josefin Sans", sans-serif;
-  @media (max-width: 900px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `
+    width: auto;    
+    @media (max-width: 900px) {
     --main-margin: 10%;
     --header-size: 2.5em;
     height: fit-content;
     background-size: 100% 100%;
-  }
+  }`}
 `;
 
 export const ComingSoon = styled.div`
@@ -35,14 +40,16 @@ export const ComingSoon = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
   grid-template-columns: 60% auto;
-  @media (max-width: 900px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    ` @media (max-width: 900px) {
     text-align: center;
     grid-template-columns: 100%;
     grid-template-rows: 80px 400px 2fr 1fr 1fr;
   }
   @media (max-width: 500px) {
     grid-template-rows: 80px 300px 2fr 1fr 1fr;
-  }
+  }`}
 `;
 
 export const HeroImg = styled.div`
@@ -51,30 +58,36 @@ export const HeroImg = styled.div`
   opacity: 90%;
   grid-column: 2 / 3;
   grid-row: 1 / 6;
-  @media (max-width: 900px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 900px) {
     background: url(${({ backgroundImgMob }) => `${backgroundImgMob}`})
       top/cover no-repeat;
     grid-column: 1 / 2;
     grid-row: 2 /3;
-  }
+  }`}
 `;
 
 export const Logo = styled.img`
   width: 10rem;
   margin: 64px var(--main-margin) 0px;
   grid-row: 1 / 2;
-  @media (max-width: 900px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    ` @media (max-width: 900px) {
     width: 6rem;
     margin: auto var(--main-margin);
-  }
+  }`}
 `;
 
 export const Center = styled.div`
   grid-row: 3 / 4;
   margin: 0px var(--main-margin);
-  @media (max-width: 900px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 900px) {
     margin: 64px var(--main-margin) 0px;
-  }
+  }`}
 `;
 
 export const HBrand = styled.h1`
@@ -117,9 +130,11 @@ export const CallToAction = styled.form`
     top: 50%;
     right: 7em;
     transform: translateY(-50%);
-    @media (max-width: 900px) {
+    ${({ theme }) =>
+      !theme.preview &&
+      `@media (max-width: 900px) {
       right: 5em;
-    }
+    }`}
   }
   &:after {
     ${({ validState }) => validState && `display: none`}
@@ -158,11 +173,13 @@ export const SubmitBtn = styled.button`
   background: linear-gradient(var(--button-gradient));
   box-shadow: 0px 2px 2px rgba(150, 0, 0, 0.2);
   transition: all 0.3s;
-  @media (max-width: 900px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 900px) {
     width: 5em;
   }
   &:hover {
     scale: 1.2;
     box-shadow: 0px 16px 16px rgba(150, 0, 0, 0.2);
-  }
+  }`}
 `;

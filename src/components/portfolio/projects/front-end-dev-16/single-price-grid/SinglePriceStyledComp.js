@@ -33,16 +33,19 @@ export const SignUpBanner = styled.div`
   margin: 32px auto;
   background-color: var(--background-primary);
   overflow: hidden;
-  @media (max-width: 699px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 699px) {
     width: 90%;
     height: fit-content;
     margin: 32px auto;
-  }
+  }`}
 `;
 
 export const FlexCont = styled.div`
   display: flex;
   height: 50%;
+  ${({ theme }) => !theme.preview && ``}
   @media (max-width: 500px) {
     flex-direction: column;
   }
@@ -64,10 +67,12 @@ export const Cont = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: ${(props) => (props.bgColor ? props.bgColor : "#ffffff")};
-  @media (max-width: 500px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 500px) {
     width: 100%;
     min-height: 300px;
-  }
+  }`}
 `;
 
 export const Header1 = styled.h1`

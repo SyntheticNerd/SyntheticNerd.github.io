@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import App from "./App";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -18,11 +23,11 @@ export default function MyRouter() {
           {/* Use a slash to denote the home page */}
           <Route index element={<Home />} />
           <Route path='portfolio/*' element={<Portfolio />}>
-            <Route path=':four-card-feature' element={<FourCardFeature />} />
-            <Route path=':profile-card-1' element={<ProfileCard1 />} />
-            <Route path=':single-price-grid' element={<SinglePriceGrid />} />
-            <Route path=':testimonial-grid' element={<TestimonialGrid />} />
-            <Route path=':base-apparel' element={<BaseApparel />} />
+            <Route path='fourCardFeature' element={<FourCardFeature />} />
+            <Route path='profileCard1' element={<ProfileCard1 />} />
+            <Route path='singlePriceGrid' element={<SinglePriceGrid />} />
+            <Route path='testimonialGrid' element={<TestimonialGrid />} />
+            <Route path='baseApparel' element={<BaseApparel />} />
           </Route>
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />

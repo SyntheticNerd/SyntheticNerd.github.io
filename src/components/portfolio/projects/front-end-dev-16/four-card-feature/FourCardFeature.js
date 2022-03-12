@@ -8,7 +8,6 @@ export default function FourCardFeature() {
   return (
     <>
       <FourCardFeatureCont>
-        <Link to='/portfolio'>Exit</Link>
         <Intro />
         <FourCard>
           <InfoCard

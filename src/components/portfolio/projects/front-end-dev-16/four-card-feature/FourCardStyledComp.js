@@ -30,10 +30,14 @@ export const CardCont = styled.div`
   transition: scale 0.3s;
   ${(props) =>
     props.borderColor && `border-top: 5px solid ${props.borderColor};`}
-  @media (max-width: 900px) {
-    width: 80%;
-    max-width: 400px;
-  }
+  ${({ theme }) =>
+    !theme.preview &&
+    `
+      @media (max-width: 900px) {
+        width: 80%;
+        max-width: 400px;
+      }
+  `}
   &:hover {
     scale: 1.1;
   }
@@ -43,39 +47,47 @@ export const FourCard = styled.div`
   width: fit-content;
   align-items: center;
   height: fit-content;
-  @media (max-width: 1399px) {
-    justify-content: center;
-    max-width: 1000px;
-    flex-wrap: wrap;
-  }
-  @media (max-width: 900px) {
-    flex-direction: column;
-  }
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 1399px) {
+      justify-content: center;
+      max-width: 1000px;
+      flex-wrap: wrap;
+      }
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }`}
 `;
 export const TwoCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 1399px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 1399px) {
     order: 1;
     flex-direction: row;
   }
   @media (max-width: 900px) {
     flex-direction: column;
-  }
+  }`}
 `;
 export const Text1 = styled.h1`
-  @media (max-width: 1399px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    ` @media (max-width: 1399px) {
     font-size: 1.5em;
-  }
+  }`}
 `;
 export const Text2 = styled.h2`
   font-weight: 200;
   font-size: 2.2em;
   color: var(--text2);
-  @media (max-width: 1399px) {
+  ${({ theme }) =>
+    !theme.preview &&
+    `@media (max-width: 1399px) {
     font-size: 1.5em;
-  }
+  }`}
 `;
 export const Text3 = styled.h3``;
 export const Text4 = styled.p`
