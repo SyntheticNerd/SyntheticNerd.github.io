@@ -65,7 +65,7 @@ const links = [
   },
   {
     name: "Testimonial's Grid",
-    path: "testimonialsGrid",
+    path: "/portfolio",
     component: <TestimonialGrid />,
     scale: 0.3,
     tags: []
