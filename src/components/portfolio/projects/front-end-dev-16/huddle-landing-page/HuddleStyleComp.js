@@ -19,6 +19,8 @@ export const HuddleMain = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 16px 16px var(--shadow1);
+  scale: 0.88;
+  -webkit-transform:scale(0.88);
   ${({ theme }) =>
     !theme.preview && `
     height: fit-content;
@@ -28,9 +30,6 @@ export const HuddleMain = styled.div`
     background: no-repeat top/100% var(--violet) ${({ bgMob }) => bgMob && `url(${bgMob})`};
     padding: 0px 32px;
   }`}
-  
-  scale: 0.88;
-  -webkit-transform:scale(0.88);
 `;
 export const FlexBox = styled.div`
   flex-grow: 1;
