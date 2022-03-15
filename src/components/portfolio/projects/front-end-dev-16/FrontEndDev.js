@@ -87,7 +87,7 @@ export default function FrontEndDev() {
     scrollArea.current.scrollLeft -= scrollWidth;
   };
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative"}}>
       <ArrowBtn direction='left' onClick={moveArrLeft}>
         <BlankIcon />
         <i><ArrowLeft /></i>

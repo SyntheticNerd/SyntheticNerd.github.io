@@ -12,7 +12,6 @@ import {
   Line3,
   TabIndicator,
   LogoIcon,
-  Overflow,
 } from "./NavStyle";
 import { ReactComponent as LinkedinIcon } from "../../icons/linkedinIcon.svg";
 import { ReactComponent as BehanceIcon } from "../../icons/behanceIcon.svg";

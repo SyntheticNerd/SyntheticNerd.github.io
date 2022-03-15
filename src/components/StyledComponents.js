@@ -42,8 +42,9 @@ export const Carousel = styled.ul`
   padding: 0px 68px;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  transition: all 0.6s ease;
   /* Hide scrollbar for Chrome, Safari and Opera */
-  &:-webkit-scrollbar {
+  &::-webkit-scrollbar {
     display: none;
   }
   -ms-overflow-style: none; /* IE and Edge */
@@ -53,7 +54,10 @@ export const Carousel = styled.ul`
     color: white;
     position: relative;
     @media (max-width: 900px) {
-      scale: 0.8;
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      transform: scale(0.8);
       margin: 0px -40px;
     }
   }
@@ -70,20 +74,29 @@ export const LgCard = styled.li`
   opacity: 0.2;
   transition: scale 0.3s, z-index 0.3s;
   box-shadow: 0px 4px 4px var(--shadow1);
-  z-index: 1;  
-  &:after{
-      content:'';
-      width: 100%;
-      height: 2em;
-      background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.27) 18.79%, rgba(0, 0, 0, 0.41) 37.78%, rgba(0, 0, 0, 0.4) 62.5%, rgba(0, 0, 0, 0.27) 79.75%, rgba(0, 0, 0, 0) 100%);
-      z-index: -1;
-      position: absolute;
-    }
+  z-index: 1;
+  -webkit-transition: all 0.6s ease;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 2em;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.27) 18.79%,
+      rgba(0, 0, 0, 0.41) 37.78%,
+      rgba(0, 0, 0, 0.4) 62.5%,
+      rgba(0, 0, 0, 0.27) 79.75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: -1;
+    position: absolute;
+  }
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
     scale: 1.05;
-    &:after{
-      z-index: 1;      
+    &:after {
+      z-index: 1;
     }
   }
 `;
@@ -126,10 +139,10 @@ export const ArrowBtn = styled.button`
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.8);
     scale: 1.1;
   }
-  svg{
+  svg {
     position: absolute;
   }
-  i{
+  i {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -139,7 +152,11 @@ export const ArrowBtn = styled.button`
 `;
 
 export const FullPreview = styled.div`
-  scale: ${({ scale }) => (scale ? scale : "0.5")};
+  -webkit-transform: ${({ scale }) =>
+    scale ? `scale(${scale})` : "scale(0.5)"};
+  -moz-transform: ${({ scale }) => (scale ? `scale(${scale})` : "scale(0.5)")};
+  -o-transform: ${({ scale }) => (scale ? `scale(${scale})` : "scale(0.5)")};
+  transform: ${({ scale }) => (scale ? `scale(${scale})` : "scale(0.5)")};
   pointer-events: none;
 `;
 
@@ -147,7 +164,7 @@ export const TagBox = styled.div`
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   bottom: 0;
   padding: 32px;
   width: 110%;

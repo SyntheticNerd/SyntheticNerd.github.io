@@ -4,7 +4,6 @@ import DeskPreview from "./DeskPreview";
 import MobPreview from "./MobPreview";
 import Register from "./Register";
 import SocIcons from "./SocIcons";
-import { useState, useEffect, useRef } from "react";
 
 const HuddlePage = () => {
   return (

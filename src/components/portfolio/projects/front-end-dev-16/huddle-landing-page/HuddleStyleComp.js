@@ -30,6 +30,7 @@ export const HuddleMain = styled.div`
   }`}
   
   scale: 0.88;
+  -webkit-transform:scale(0.88);
 `;
 export const FlexBox = styled.div`
   flex-grow: 1;
@@ -71,7 +72,7 @@ export const FooterCont = styled.div`
   }`}
   
 `;
-export const SocLink = styled.a`
+export const SocLink = styled.div`
   margin: 0px 16px;
   border: 2px solid white;
   border-radius: 50%;

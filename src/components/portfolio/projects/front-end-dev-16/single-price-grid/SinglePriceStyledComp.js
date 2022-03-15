@@ -24,6 +24,7 @@ export const SinglePriceCont = styled.div`
   align-items: center;
   text-align: left;
   scale: 0.88;
+  -webkit-transform:scale(0.88);
 `;
 
 export const SignUpBanner = styled.div`

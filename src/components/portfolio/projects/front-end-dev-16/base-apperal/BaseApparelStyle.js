@@ -19,6 +19,7 @@ export const BALandingPage = styled.div`
   display: flex;
   text-align: left;
   scale: 0.88;
+  -webkit-transform:scale(0.88);
   font-family: "Josefin Sans", sans-serif;
   ${({ theme }) =>
     !theme.preview &&
