@@ -12,6 +12,7 @@ export const NavBarCont = styled.nav`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 16px;
   z-index: 5;
+  overflow: hidden;
 `;
 
 export const NavFolder = styled.div`

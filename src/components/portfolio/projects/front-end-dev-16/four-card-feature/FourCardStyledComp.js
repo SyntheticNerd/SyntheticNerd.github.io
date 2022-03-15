@@ -7,6 +7,8 @@ export const FourCardFeatureCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  scale: 0.88;
+  box-shadow: 0px 8px 16px var(--shadow1);
 `;
 export const IntroCont = styled.div`
   margin-top: 16px;

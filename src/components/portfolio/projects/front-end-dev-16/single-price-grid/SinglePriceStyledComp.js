@@ -23,6 +23,7 @@ export const SinglePriceCont = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: left;
+  scale: 0.88;
 `;
 
 export const SignUpBanner = styled.div`

@@ -14,6 +14,7 @@ import ProfileCard1 from "./components/portfolio/projects/front-end-dev-16/profi
 import SinglePriceGrid from "./components/portfolio/projects/front-end-dev-16/single-price-grid/SinglePriceGrid";
 import TestimonialGrid from "./components/portfolio/projects/front-end-dev-16/testimonials-grid/TestimonialGrid";
 import BaseApparel from "./components/portfolio/projects/front-end-dev-16/base-apperal/BaseApparel";
+import HuddlePage from "./components/portfolio/projects/front-end-dev-16/huddle-landing-page/HuddlePage";
 
 export default function MyRouter() {
   return (
@@ -25,6 +26,7 @@ export default function MyRouter() {
           <Route path='portfolio/*' element={<Portfolio />}>
             <Route path='fourCardFeature' element={<FourCardFeature />} />
             <Route path='profileCard1' element={<ProfileCard1 />} />
+            <Route path='huddleLanding' element={<HuddlePage />} />
             <Route path='singlePriceGrid' element={<SinglePriceGrid />} />
             <Route path='testimonialGrid' element={<TestimonialGrid />} />
             <Route path='baseApparel' element={<BaseApparel />} />

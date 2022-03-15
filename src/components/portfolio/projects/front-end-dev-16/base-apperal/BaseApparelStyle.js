@@ -11,22 +11,24 @@ export const BALandingPage = styled.div`
   --header-size: 3.5em;
   --p-size: 16px;
 
-  height: 100vh;
+  height: 800px;
   width: 1440px;
   background-image: linear-gradient(var(--background-gradient));
   background-size: 66% 100%;
   color: black;
   display: flex;
   text-align: left;
-  scale: 0.9;
+  scale: 0.88;
   font-family: "Josefin Sans", sans-serif;
   ${({ theme }) =>
     !theme.preview &&
     `
+    height: 100vh;
     width: auto;    
     @media (max-width: 900px) {
     --main-margin: 10%;
     --header-size: 2.5em;
+    min-height: 100vh;
     height: fit-content;
     background-size: 100% 100%;
   }`}
@@ -34,7 +36,7 @@ export const BALandingPage = styled.div`
 
 export const ComingSoon = styled.div`
   width: 100%;
-  background: url(${({ backgroundImg }) => `${backgroundImg}`}) center/cover
+  background: url(${({ backgroundImg }) => `${backgroundImg}`}) center/100%
     no-repeat;
   height: 100%;
   display: grid;
@@ -45,7 +47,7 @@ export const ComingSoon = styled.div`
     ` @media (max-width: 900px) {
     text-align: center;
     grid-template-columns: 100%;
-    grid-template-rows: 80px 400px 2fr 1fr 1fr;
+    grid-template-rows: 80px 5fr 2fr 1fr 1fr;
   }
   @media (max-width: 500px) {
     grid-template-rows: 80px 300px 2fr 1fr 1fr;
@@ -171,6 +173,7 @@ export const SubmitBtn = styled.button`
   background: linear-gradient(var(--button-gradient));
   box-shadow: 0px 2px 2px rgba(150, 0, 0, 0.2);
   transition: all 0.3s;
+  cursor: pointer;
   ${({ theme }) =>
     !theme.preview &&
     `@media (max-width: 900px) {

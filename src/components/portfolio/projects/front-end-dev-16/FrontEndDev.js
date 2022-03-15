@@ -13,6 +13,7 @@ import SinglePriceGrid from "./single-price-grid/SinglePriceGrid";
 import ProfileCard1 from "./profile-card-1/ProfileCard1";
 import FourCardFeature from "./four-card-feature/FourCardFeature";
 import TestimonialGrid from "./testimonials-grid/TestimonialGrid";
+import HuddlePage from "./huddle-landing-page/HuddlePage";
 import BaseApparel from "./base-apperal/BaseApparel";
 import { ThemeProvider } from "styled-components";
 import { ReactComponent as BlankIcon } from "../../../../icons/blankIcon.svg";
@@ -32,21 +33,28 @@ const links = [
     path: "singlePriceGrid",
     component: <SinglePriceGrid />,
     scale: 0.3,
-    tags: ["Responsive", "Dark Theme"]
+    tags: ["Dark Theme", "Mobile Friendly"]
   },
   {
     name: "Four Card Feature",
     path: "fourCardFeature",
     component: <FourCardFeature />,
     scale: 0.2,
-    tags: ["Responsive", "Dark Theme", "Interactive"]
+    tags: ["Dark Theme", "Interactive", "Mobile Friendly"]
   },
   {
     name: "Base Apparel",
     path: "baseApparel",
     component: <BaseApparel />,
-    scale: 0.19,
-    tags: ["Responsive", "Interactive"]
+    scale: 0.2,
+    tags: ["Interactive", "Mobile Friendly"]
+  },
+  {
+    name: "Huddle Landing",
+    path: "huddleLanding",
+    component: <HuddlePage />,
+    scale: 0.22,
+    tags: ["Custom CSS Art", "Mobile Friendly"]
   },
   {
     name: "Profile Card",

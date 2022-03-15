@@ -68,20 +68,22 @@ export const LgCard = styled.li`
   align-items: center;
   justify-content: center;
   opacity: 0.2;
-  transition: all 0.3s, scale 0.3s;
+  transition: scale 0.3s, z-index 0.3s;
   box-shadow: 0px 4px 4px var(--shadow1);
   z-index: 1;  
-  &:hover {
-    opacity: 1;
-    scale: 1.05;
-    &:after{
+  &:after{
       content:'';
       width: 100%;
       height: 2em;
       background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.27) 18.79%, rgba(0, 0, 0, 0.41) 37.78%, rgba(0, 0, 0, 0.4) 62.5%, rgba(0, 0, 0, 0.27) 79.75%, rgba(0, 0, 0, 0) 100%);
-      z-index: 1;
+      z-index: -1;
       position: absolute;
-      opacity: 1;
+    }
+  &:hover {
+    opacity: .8;
+    scale: 1.05;
+    &:after{
+      z-index: 1;      
     }
   }
 `;
@@ -148,7 +150,9 @@ export const TagBox = styled.div`
   justify-content:center;
   bottom: 0;
   padding: 32px;
-  width: 100%;
+  width: 110%;
+  transform: translateX(-4%);
+  z-index: 1;
 `;
 
 export const Tag = styled.p`
