@@ -27,19 +27,19 @@ export default function Nav() {
   let navigate = useNavigate();
   let location = useLocation();
 
-  
-  useEffect(()=>{
-    let parent = document.querySelector(".navBarTest").parentElement && document.querySelector(".navBarTest").parentElement;
-    console.log(parent);
-     while (parent) {
-      const hasOverflow = getComputedStyle(parent).overflow;
-      console.log(hasOverflow);
-      if (hasOverflow !== "visible") {
-        console.log(hasOverflow, parent);
-      }
-      parent = parent.parentElement;
-    }
-  })
+  ////tests for over flow parents
+  // useEffect(()=>{
+  //   let parent = document.querySelector(".navBarTest").parentElement && document.querySelector(".navBarTest").parentElement;
+  //   console.log(parent);
+  //    while (parent) {
+  //     const hasOverflow = getComputedStyle(parent).overflow;
+  //     console.log(hasOverflow);
+  //     if (hasOverflow !== "visible") {
+  //       console.log(hasOverflow, parent);
+  //     }
+  //     parent = parent.parentElement;
+  //   }
+  // })
   
   return (
     <NavBarCont className='navBarTest' navModal={navModal}>

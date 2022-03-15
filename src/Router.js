@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
 import App from "./App";
 import Home from "./components/Home";
@@ -23,16 +22,16 @@ export default function MyRouter() {
         <Route path='/' element={<App />}>
           {/* Use a slash to denote the home page */}
           <Route index element={<Home />} />
-          <Route path='/portfolio/' element={<Portfolio />}>
-            <Route path='/portfolio/fourCardFeature' element={<FourCardFeature />} />
-            <Route path='/portfolio/profileCard1' element={<ProfileCard1 />} />
-            <Route path='/portfolio/huddleLanding' element={<HuddlePage />} />
-            <Route path='/portfolio/singlePriceGrid' element={<SinglePriceGrid />} />
-            <Route path='/portfolio/testimonialGrid' element={<TestimonialGrid />} />
-            <Route path='/portfolio/baseApparel' element={<BaseApparel />} />
+          <Route exact path='/portfolio/' element={<Portfolio />}>
+            <Route exact path='/portfolio/fourCardFeature' element={<FourCardFeature />} />
+            <Route exact path='/portfolio/profileCard1' element={<ProfileCard1 />} />
+            <Route exact path='/portfolio/huddleLanding' element={<HuddlePage />} />
+            <Route exact path='/portfolio/singlePriceGrid' element={<SinglePriceGrid />} />
+            <Route exact path='/portfolio/testimonialGrid' element={<TestimonialGrid />} />
+            <Route exact path='/portfolio/baseApparel' element={<BaseApparel />} />
           </Route>
-          <Route path='about' element={<About />} />
-          <Route path='contact' element={<Contact />} />
+          <Route exact path='about' element={<About />} />
+          <Route exact path='contact' element={<Contact />} />
           {/* <Route path="catagory/:catagoryId" element={<ProductArray />} /> */}
         </Route>
       </Routes>

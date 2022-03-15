@@ -19,15 +19,17 @@ export const HuddleMain = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 16px 16px var(--shadow1);
-  scale: 0.8;
-  -webkit-transform:scale(0.88);
+  -webkit-transform: scale(0.88);
+  transform: scale(0.88);
   ${({ theme }) =>
-    !theme.preview && `
+    !theme.preview &&
+    `
     height: fit-content;
     min-height: 100vh;
     width: auto;
     @media (max-width: 1000px) {
-    background: no-repeat top/100% var(--violet) ${({ bgMob }) => bgMob && `url(${bgMob})`};
+    background: no-repeat top/100% var(--violet) ${({ bgMob }) =>
+      bgMob && `url(${bgMob})`};
     padding: 0px 32px;
   }`}
 `;
@@ -38,24 +40,24 @@ export const FlexBox = styled.div`
   justify-self: flex-start;
   justify-content: space-around;
   ${({ theme }) =>
-    !theme.preview && `
+    !theme.preview &&
+    `
     @media (max-width: 1000px) {
     width: 100%;
     flex-direction: column;
   }`}
-  
 `;
 export const Logo = styled.img`
   width: 13rem;
   height: 3rem;
   margin-top: 50px;
   ${({ theme }) =>
-    !theme.preview && `
+    !theme.preview &&
+    `
     @media (max-width: 1000px) {
     margin-top: 32px;
     width: 10rem;
   }`}
-  
 `;
 export const FooterCont = styled.div`
   justify-self: flex-end;
@@ -64,12 +66,12 @@ export const FooterCont = styled.div`
   color: white;
   margin-bottom: 50px;
   ${({ theme }) =>
-    !theme.preview && `
+    !theme.preview &&
+    `
     @media (max-width: 1000px) {
     justify-content: center;
     padding-bottom: 32px;
   }`}
-  
 `;
 export const SocLink = styled.div`
   margin: 0px 16px;
@@ -89,12 +91,12 @@ export const Section1 = styled.div`
   flex-direction: column;
   align-items: center;
   ${({ theme }) =>
-    !theme.preview && `
+    !theme.preview &&
+    `
     @media (max-width: 1000px) {
     width: 100%;
     margin: 64px 0px;
   }`}
-  
 `;
 
 export const RegCont = styled.div`
@@ -102,12 +104,12 @@ export const RegCont = styled.div`
   width: 40%;
   padding-left: 32px;
   ${({ theme }) =>
-    !theme.preview && `
+    !theme.preview &&
+    `
     @media (max-width: 1000px) {
     text-align: center;
     width: 100%;
   }`}
-  
 `;
 export const MainH1 = styled.h1`
   color: white;
@@ -115,12 +117,12 @@ export const MainH1 = styled.h1`
   font-size: 2rem;
   line-height: 4rem;
   ${({ theme }) =>
-    !theme.preview && `
+    !theme.preview &&
+    `
     @media (max-width: 1000px) {
     font-size: 1.7rem;
     line-height: 2.7rem;
   }`}
-  
 `;
 export const MainText = styled.p`
   color: white;
@@ -140,9 +142,10 @@ export const RegBtn = styled.button`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
   cursor: pointer;
-  &:hover{
+  &:hover {
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5);
-    scale: 1.05;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     color: white;
     background-color: var(--soft-magenta);
   }

@@ -7,8 +7,8 @@ export const FourCardFeatureCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  scale: 0.88;
   -webkit-transform:scale(0.88);
+  transform: scale(0.88);
   box-shadow: 0px 8px 16px var(--shadow1);
 `;
 export const IntroCont = styled.div`
@@ -16,9 +16,10 @@ export const IntroCont = styled.div`
   text-align: center;
   width: 80%;
   max-width: 560px;
-  transition: scale 0.3s;
+  transition: all 0.3s;
   &:hover {
-    scale: 1.1;
+    -webkit-transform:scale(1.1);
+    transform: scale(1.1);
   }
 `;
 export const CardCont = styled.div`
@@ -30,7 +31,7 @@ export const CardCont = styled.div`
   padding: 32px;
   border-radius: 8px;
   background-color: #1e1e1e;
-  transition: scale 0.3s;
+  transition: all 0.3s;
   ${(props) =>
     props.borderColor && `border-top: 5px solid ${props.borderColor};`}
   ${({ theme }) =>
@@ -42,7 +43,8 @@ export const CardCont = styled.div`
       }
   `}
   &:hover {
-    scale: 1.1;
+    -webkit-transform:scale(1.1);
+    transform: scale(1.1);
   }
 `;
 export const FourCard = styled.div`

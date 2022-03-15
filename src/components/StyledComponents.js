@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export const CSSVariables = styled.div`
   --gold-gradient: linear-gradient(
@@ -72,10 +72,10 @@ export const LgCard = styled.li`
   align-items: center;
   justify-content: center;
   opacity: 0.2;
-  transition: scale 0.3s, z-index 0.3s;
+  transition: transform 0.2s, z-index 0.3s;
+  -webkit-transition: transform 0.2s, z-index 0.3s;
   box-shadow: 0px 4px 4px var(--shadow1);
   z-index: 1;
-  -webkit-transition: all 0.6s ease;
   &:after {
     content: "";
     width: 100%;
@@ -94,7 +94,8 @@ export const LgCard = styled.li`
   }
   &:hover {
     opacity: 0.8;
-    scale: 1.05;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     &:after {
       z-index: 1;
     }
@@ -137,7 +138,8 @@ export const ArrowBtn = styled.button`
   align-items: center;
   &:hover {
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.8);
-    scale: 1.1;
+    -webkit-transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.1);
   }
   svg {
     position: absolute;
@@ -170,6 +172,7 @@ export const TagBox = styled.div`
   width: 110%;
   transform: translateX(-4%);
   z-index: 1;
+  pointer-events: none;
 `;
 
 export const Tag = styled.p`

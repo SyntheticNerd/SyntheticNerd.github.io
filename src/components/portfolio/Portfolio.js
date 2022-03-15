@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Portfolio() {
   const params = useParams();
   useEffect(() => {
-    console.log(params);
+    // console.log(params);
   }, [params]);
   return (
     <>

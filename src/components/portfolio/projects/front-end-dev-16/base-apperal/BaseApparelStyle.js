@@ -18,8 +18,8 @@ export const BALandingPage = styled.div`
   color: black;
   display: flex;
   text-align: left;
-  scale: 0.88;
   -webkit-transform:scale(0.88);
+    transform: scale(0.88);
   font-family: "Josefin Sans", sans-serif;
   ${({ theme }) =>
     !theme.preview &&
@@ -181,7 +181,8 @@ export const SubmitBtn = styled.button`
     width: 5em;
   }
   &:hover {
-    scale: 1.2;
+    -webkit-transform:scale(1.2);
+    transform: scale(1.2);
     box-shadow: 0px 16px 16px rgba(150, 0, 0, 0.2);
   }`}
 `;

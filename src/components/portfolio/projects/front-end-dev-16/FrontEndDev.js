@@ -94,7 +94,7 @@ export default function FrontEndDev() {
       </ArrowBtn>
       <Carousel ref={scrollArea}>
         {links.map((link, index) => (
-          <NavLink key={index} to={link.path} exact activeClassName='current'>
+          <NavLink key={index} to={link.path}>
             <LinkText>{link.name}</LinkText>
             <TagBox>{link.tags.map((tag, index)=>(
               <Tag key={index}>{tag}</Tag>

@@ -9,7 +9,6 @@ let colorArr = [];
 for (let i = 3; i <= 5; i++){
   colorArr.push(<Brief key={i} gradient={i%3+1}/>)
 }
-console.log(colorArr);
 
 const DeskPreview = () => {
   return (

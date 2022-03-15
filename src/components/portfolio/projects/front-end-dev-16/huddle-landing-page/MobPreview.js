@@ -9,7 +9,6 @@ let colorArr = [];
 for (let i = 3; i <= 10; i++){
   colorArr.push(<Brief key={i} gradient={i%3+1} mobile={true}/>)
 }
-console.log(colorArr);
 
 const MobPreview = () => {
   return (
