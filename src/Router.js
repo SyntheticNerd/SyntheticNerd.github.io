@@ -23,13 +23,13 @@ export default function MyRouter() {
         <Route path='/' element={<App />}>
           {/* Use a slash to denote the home page */}
           <Route index element={<Home />} />
-          <Route path='portfolio/*' element={<Portfolio />}>
-            <Route path='fourCardFeature' element={<FourCardFeature />} />
-            <Route path='profileCard1' element={<ProfileCard1 />} />
-            <Route path='huddleLanding' element={<HuddlePage />} />
-            <Route path='singlePriceGrid' element={<SinglePriceGrid />} />
-            <Route path='testimonialGrid' element={<TestimonialGrid />} />
-            <Route path='baseApparel' element={<BaseApparel />} />
+          <Route path='/portfolio/' element={<Portfolio />}>
+            <Route path='/portfolio/fourCardFeature' element={<FourCardFeature />} />
+            <Route path='/portfolio/profileCard1' element={<ProfileCard1 />} />
+            <Route path='/portfolio/huddleLanding' element={<HuddlePage />} />
+            <Route path='/portfolio/singlePriceGrid' element={<SinglePriceGrid />} />
+            <Route path='/portfolio/testimonialGrid' element={<TestimonialGrid />} />
+            <Route path='/portfolio/baseApparel' element={<BaseApparel />} />
           </Route>
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />

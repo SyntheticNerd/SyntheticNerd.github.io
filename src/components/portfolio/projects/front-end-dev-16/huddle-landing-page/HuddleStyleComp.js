@@ -19,7 +19,7 @@ export const HuddleMain = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 16px 16px var(--shadow1);
-  scale: 0.88;
+  scale: 0.8;
   -webkit-transform:scale(0.88);
   ${({ theme }) =>
     !theme.preview && `
