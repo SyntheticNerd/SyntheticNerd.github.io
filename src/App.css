@@ -1,4 +1,5 @@
 .App {
   /* overflow-x: hidden; */
-  min-height: 100vh;
+  height: fit-content;
+  padding-top: 4em;
 }

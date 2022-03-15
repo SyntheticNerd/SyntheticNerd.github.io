@@ -97,7 +97,7 @@ export default function FrontEndDev() {
           <NavLink key={index} to={link.path} exact activeClassName='current'>
             <LinkText>{link.name}</LinkText>
             <TagBox>{link.tags.map((tag, index)=>(
-              <Tag>{tag}</Tag>
+              <Tag key={index}>{tag}</Tag>
             ))}</TagBox>
             <LgCard>
               <FullPreview scale={link.scale}>

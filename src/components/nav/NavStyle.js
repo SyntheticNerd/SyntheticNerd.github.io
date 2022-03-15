@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const NavBarCont = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
   background: #1e1e1e;
   height: fit-content;
+  width: 100%;
   display: flex;
   align-items: center;
   height: 4em;
@@ -12,8 +13,8 @@ export const NavBarCont = styled.nav`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 16px;
   z-index: 5;
-  overflow: hidden;
 `;
+
 
 export const NavFolder = styled.div`
   display: flex;
@@ -35,7 +36,7 @@ export const LinkList = styled.ul`
     flex-direction: column;
     justify-content: flex-start;
     background: #1e1e1e;
-    transition: transform 0.5s;
+    transition: transform 0.8s;
     box-shadow: -4px 6px 8px rgba(0, 0, 0, 0.5);
 
     ${(props) =>
