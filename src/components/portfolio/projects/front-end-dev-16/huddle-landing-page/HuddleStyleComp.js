@@ -24,8 +24,9 @@ export const HuddleMain = styled.div`
   ${({ theme }) =>
     !theme.preview &&
     `
-    height: fit-content;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: fit-content;
+    max-height: 1200px;
     width: auto;
     @media (max-width: 1000px) {
     background: no-repeat top/100% var(--violet) ${({ bgMob }) =>

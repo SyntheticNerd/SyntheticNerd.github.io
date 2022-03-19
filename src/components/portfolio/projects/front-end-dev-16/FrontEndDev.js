@@ -29,18 +29,11 @@ import React from "react";
 
 const links = [
   {
-    name: "Single Price Grid",
-    path: "singlePriceGrid",
-    component: <SinglePriceGrid />,
-    scale: 0.3,
-    tags: ["Dark Theme", "Mobile Friendly"]
-  },
-  {
-    name: "Four Card Feature",
-    path: "fourCardFeature",
-    component: <FourCardFeature />,
-    scale: 0.2,
-    tags: ["Dark Theme", "Interactive", "Mobile Friendly"]
+    name: "Huddle Landing",
+    path: "huddleLanding",
+    component: <HuddlePage />,
+    scale: 0.22,
+    tags: ["Custom CSS Art", "Mobile Friendly"]
   },
   {
     name: "Base Apparel",
@@ -50,12 +43,21 @@ const links = [
     tags: ["Interactive", "Mobile Friendly"]
   },
   {
-    name: "Huddle Landing",
-    path: "huddleLanding",
-    component: <HuddlePage />,
-    scale: 0.22,
-    tags: ["Custom CSS Art", "Mobile Friendly"]
+    name: "Four Card Feature",
+    path: "fourCardFeature",
+    component: <FourCardFeature />,
+    scale: 0.2,
+    tags: ["Dark Theme", "Interactive", "Mobile Friendly"]
   },
+  {
+    name: "Single Price Grid",
+    path: "singlePriceGrid",
+    component: <SinglePriceGrid />,
+    scale: 0.3,
+    tags: ["Dark Theme", "Mobile Friendly"]
+  },
+  
+  
   {
     name: "Profile Card",
     path: "profileCard1",
@@ -65,7 +67,7 @@ const links = [
   },
   {
     name: "Testimonial's Grid",
-    path: "/portfolio",
+    path: "testimonialGrid",
     component: <TestimonialGrid />,
     scale: 0.3,
     tags: []

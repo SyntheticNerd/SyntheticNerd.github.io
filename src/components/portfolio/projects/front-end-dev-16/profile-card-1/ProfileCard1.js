@@ -1,4 +1,5 @@
 import React from "react";
+import { Banner, BottomBlock, Content, Header, ProfileCard, ProfileDetails, ProfilePic, SmallContainer, Text1, TopBlock } from "./ProfileCardStyle";
 
 const victor = {
   fName: "Victor",
@@ -12,31 +13,31 @@ const victor = {
 
 export default function ProfileCard1() {
   return (
-    <div className="content">
-    <div className="profileCard">
-      <div className="topBlock">
-        <div className="banner"></div>
-        <div className="profilePic"></div>
-        <div className="profileDetails">
-          <div><span className="header">Victor Crest</span><span className="age">26</span></div>
-          <p className="text1">London</p>
-        </div>
-      </div>
-      <div className="bottomBlock">
-        <div className="smallContainer">
-          <h1 className="header">80K</h1>
-          <p className="text1">Followers</p>
-        </div>
-        <div className="smallContainer">
-          <h1 className="header">803K</h1>
-          <p className="text1">Likes</p>
-        </div>
-        <div className="smallContainer">
-          <h1 className="header">1.4K</h1>
-          <p className="text1">Photos</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <Content>
+    <ProfileCard>
+      <TopBlock>
+        <Banner></Banner>
+        <ProfilePic src={process.env.PUBLIC_URL + "/profile-card-images/image-victor.jpg"} alt={victor.fName + ' ' + victor.lName} />
+        <ProfileDetails>
+          <Header>Victor Crest<span>26</span></Header>
+          <Text1>London</Text1>
+        </ProfileDetails>
+      </TopBlock>
+      <BottomBlock>
+        <SmallContainer>
+          <Header>80K</Header>
+          <Text1>Followers</Text1>
+        </SmallContainer>
+        <SmallContainer>
+          <Header>803K</Header>
+          <Text1>Likes</Text1>
+        </SmallContainer>
+        <SmallContainer>
+          <Header>1.4K</Header>
+          <Text1>Photos</Text1>
+        </SmallContainer>
+      </BottomBlock>
+    </ProfileCard>
+  </Content>
   );
 }

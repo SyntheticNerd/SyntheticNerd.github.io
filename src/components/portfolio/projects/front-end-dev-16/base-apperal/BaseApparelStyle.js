@@ -25,6 +25,7 @@ export const BALandingPage = styled.div`
     !theme.preview &&
     `
     height: 100vh;
+    max-height: 1200px;
     width: auto;    
     @media (max-width: 900px) {
     --main-margin: 10%;
