@@ -67,7 +67,7 @@ export const GridChild = styled.div`
   text-align: left;
   ${(props) => {
     switch (props.section % 5) {
-      case 0:
+      case 0://yah this might look a bit crazy basically it switch the style for every element in the array cycling through 5 possible styles
         return `
         grid-area: box1;
         position: relative;

@@ -43,6 +43,13 @@ const links = [
     tags: ["Interactive", "Mobile Friendly"]
   },
   {
+    name: "Testimonial's Grid",
+    path: "testimonialGrid",
+    component: <TestimonialGrid />,
+    scale: 0.2,
+    tags: ["Mobile Friendly", "Context API"]
+  },
+  {
     name: "Four Card Feature",
     path: "fourCardFeature",
     component: <FourCardFeature />,
@@ -56,20 +63,11 @@ const links = [
     scale: 0.3,
     tags: ["Dark Theme", "Mobile Friendly"]
   },
-  
-  
   {
     name: "Profile Card",
     path: "profileCard1",
     component: <ProfileCard1 />,
     scale: 0.3,
-    tags: []
-  },
-  {
-    name: "Testimonial's Grid",
-    path: "testimonialGrid",
-    component: <TestimonialGrid />,
-    scale: 0.2,
     tags: []
   },
 ];
