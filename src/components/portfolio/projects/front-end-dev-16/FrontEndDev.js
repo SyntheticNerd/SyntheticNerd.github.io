@@ -69,7 +69,7 @@ const links = [
     name: "Testimonial's Grid",
     path: "testimonialGrid",
     component: <TestimonialGrid />,
-    scale: 0.3,
+    scale: 0.2,
     tags: []
   },
 ];
