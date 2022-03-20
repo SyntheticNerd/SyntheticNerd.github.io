@@ -20,8 +20,8 @@ export const Goldh1 = styled.h1`
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 400;
   /* text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.8); */
-  margin: 32px;
 `;
 
 export const Goldp = styled.p`
@@ -185,4 +185,9 @@ export const Tag = styled.p`
   font-weight: 300;
   color: var(--fontMedEmp);
   pointer-events: none;
+`;
+
+export const SectionTitle = styled.div`
+  text-align: left;
+  margin: 32px auto 16px 96px;
 `;
