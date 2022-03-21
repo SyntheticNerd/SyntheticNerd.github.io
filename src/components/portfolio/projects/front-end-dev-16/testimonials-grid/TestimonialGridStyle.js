@@ -34,7 +34,7 @@ export const GridContainer = styled.div`
   ${({ theme }) =>
     !theme.preview &&
     `
-        @media(max-width: 1439px){
+        @media(max-width: 1600px){
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, fit-content);
         grid-template-areas:
@@ -47,8 +47,8 @@ export const GridContainer = styled.div`
           grid-template-rows: repeat(3, fit-content);
           grid-template-areas:
             "box1 box2"
-            "box4 box5"
-            "box3 box3";
+            "box3 box3"
+            "box4 box5";
         }
         @media(max-width: 790px){
           grid-template-columns: repeat(1, 1fr);

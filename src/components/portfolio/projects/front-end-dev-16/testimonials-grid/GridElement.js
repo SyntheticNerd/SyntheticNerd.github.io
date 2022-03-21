@@ -1,7 +1,6 @@
 import { FullQuote, GridChild, InfoContainer, MainQuote, MainText, Name, Position, ProfileInfo, ProfilePic, SubText } from "./TestimonialGridStyle";
 
 export default function GridElement({ testimony, index }) {
-  console.log(index);
   return (
     <GridChild section={index}>
       <ProfileInfo>

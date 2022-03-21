@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Content = styled.div`
   flex-grow: 1;
   width: 100%;
+  margin-bottom: 32px;
 `;
 export const ProfileCard = styled.div`
   width: 400px;
   /* height: 375px; */
   max-width: 80vw;
-  margin: auto;
-  margin-top: 32px;
+  margin: 32px auto;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   overflow: hidden;

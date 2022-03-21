@@ -189,5 +189,11 @@ export const Tag = styled.p`
 
 export const SectionTitle = styled.div`
   text-align: left;
-  margin: 32px auto 16px 96px;
+  margin: 32px auto 0px 72px;
+  @media(max-width: 700px){
+    margin: 32px auto 0px 32px;
+    & > h1{
+      font-size: 5vw;
+    }
+  }
 `;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ArtCont = styled.div`
   width: 100%;
   position: relative;
+  padding: 32px 0px;
 `;
 export const DeskCont = styled.div`
   position: relative;
