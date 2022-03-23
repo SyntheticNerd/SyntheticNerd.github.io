@@ -15,59 +15,47 @@ export const M8BSection = styled.div`
 
   color: var(--textColorPrimary);
   background-color: var(--background);
-  width: 70vw;
-  height: 100vh;
+  width: 400px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
   margin: auto;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
 `;
 export const AnimBtn = styled.div`
-  height: auto;
-  padding-right: 2em;
-  margin-bottom: 2em;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  right: min(20px, 300px);
+  /* display: flex; */
 `;
 export const CollapseDoc = styled.div`
   position: relative;
-  /* top: -2.5em; */
   height: auto;
-  /* padding-top: 3.5em; */
-  padding-left: 6em;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  right: 32px;
   z-index: 3;
+  /* left: 0px; */
 `;
 export const M8B = styled.div`
-  width: 100%;
+  position: relative;
+  width: fit-content;
   max-width: 500px;
   height: auto;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 `;
 export const Ball = styled.div`
-  margin-top: 3em;
-  height: auto;
   width: min(50%, 300px);
   animation: float 6s ease-in-out infinite;
 `;
 export const Shadow = styled.div`
-  transform: translateY(-10%) perspective(20px) rotateX(6deg) scale(1, 0.4);
-  /* position: absolute; */
-  width: 50%;
-  height: 30vh;
-  bottom: 0;
+  transform: translateY(-30%) perspective(20px) rotateX(6deg) scale(1, 0.4);
+  position: absolute;
+  width: min(50%, 300px);
+  height: 300px;
   background-color: black;
   border-radius: 50%;
   background: radial-gradient(
@@ -75,18 +63,16 @@ export const Shadow = styled.div`
     transparent min(50%, 300px)
   );
   pointer-events: none;
-
   animation: pulse 6s ease-in-out infinite;
 `;
 export const Question = styled.form`
-  width: 100vw;
+  width: 100%;
   position: relative;
   display: flex;
-  top: -10vh;
+  /* top: -10vh; */
   flex-direction: column;
   align-items: center;
   text-align: center;
 `;
 export const Submit = styled.div`
-  transform: translate(-4em, 3em);
 `;
