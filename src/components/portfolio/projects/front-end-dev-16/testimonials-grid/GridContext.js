@@ -1,5 +1,5 @@
 //practice Context
-import { createContext, useEffect, useState } from "react";
+import { createContext} from "react";
 const testimonials = [
   {
     name: `Daniel Clifford`,

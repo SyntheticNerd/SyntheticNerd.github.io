@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Goldh1, SectionTitle } from "../../../StyledComponents";
+import { FlexRow, Goldh1, SectionTitle } from "../../../StyledComponents";
 import {
   AnimBtn,
   Ball,
   CollapseDoc,
   M8B,
+  M8BArticle,
+  M8BFrame,
   M8BSection,
   Question,
   Shadow,
@@ -95,171 +97,42 @@ let answerArray = [
 ];
 
 function Magic8Ball() {
-  //   const [magicSection, setMagicSection] = useState(document.getElementById("magicSection"));
-  // const [question, setQuestion] = useState(document.getElementById("theQuestion"));
-  // const [magicBall, setMagicBall] = useState(document.getElementById("theball"));
-  // const [animBtn, setAnimBtn] = useState(document.getElementById("animationToggle"));
-  // const [shadow, setShadow] = useState(document.querySelector(".shadow"));
-
-  useEffect(() => {
-    // setMagicSection(document.getElementById("magicSection"));
-    if (document.getElementById("magicSection")) {
-      let collapsableDoc = document.getElementById("collapsableDoc");
-      let animbutton = document.getElementById("animationToggle");
-      let theQuestion = document.getElementById("theQuestion");
-      let shadow = document.querySelector(".shadow");
-      let magicball = document.getElementById("theball");
-
-      let burger = new JSBurgerMenu(collapsableDoc, "40px");
-      let history = new GridDoc(
-        collapsableDoc,
-        null,
-        "1px",
-        "1px",
-        "600px",
-        "500px"
-      );
-
-      let animBTN = new JSCheckBox(
-        animbutton,
-        1,
-        "Activate </br> Animation",
-        "Deactivate </br> Animation"
-      );
-      let submitBTN =
-        document.getElementById("submit") &&
-        new JSSubmitBtn(
-          document.getElementById("submit"),
-          "1.5em",
-          "Submit",
-          "Submit"
-        );
-      burger.draw();
-      history.draw();
-      animBTN.input.checked = true;
-      animBTN.draw();
-      submitBTN.draw();
-
-      animbutton.addEventListener("click", () => {
-        // sessionStorage.clear();
-        if (!animBTN.input.checked) {
-          magicball.style.animation = "none";
-          shadow.style.animation = "none";
-        } else {
-          magicball.style.animation = "float 6s ease-in-out infinite";
-          shadow.style.animation = "pulse 6s ease-in-out infinite";
-        }
-      });
-      let startBall = new MagicBall(magicball, "start");
-      startBall.draw();
-
-      collapsableDoc.addEventListener("change", () => {
-        if (burger.input.checked) {
-          history.styleActive();
-        } else {
-          history.style();
-        }
-      });
-      let question = new JSInput(
-        theQuestion,
-        "Ask a Question Here",
-        "var(--textColorPrimary)",
-        "300px",
-        "",
-        "1em"
-      );
-      question.draw();
-      let sourceArray = [];
-      for (let i = 1; i <= 20; i++) {
-        let _src = process.env.PUBLIC_URL + `/m8b-images/magic8ball_${i}.png`;
-        sourceArray.push(_src);
-      }
-      function getSessionStorage() {
-        let sessionStorageArr = [];
-        console.log(sessionStorage.length);
-        let indexHolder = 0;
-        for (let i = 0; i < sessionStorage.length; i++) {
-          console.log(sessionStorage.length);
-          let key = sessionStorage.key(i);
-          let storedArray = JSON.parse(sessionStorage.getItem(key));
-
-          if (key !== "IsThisFirstTime_Log_From_LiveServer") {
-            let _key = `theQuestion${indexHolder}`;
-            sessionStorageArr.push(JSON.parse(sessionStorage.getItem(_key)));
-            indexHolder++;
-          }
-        }
-        console.log(sessionStorageArr);
-        return sessionStorageArr;
-      }
-      let testtable = new JSTableMaker(
-        history.background,
-        null,
-        getSessionStorage()
-      );
-      testtable.draw();
-      theQuestion.addEventListener("submit", (event) => {
-        event.preventDefault();
-      
-        let randomIndex = randomNumber(1, 20) - 1;
-        let datetime = `${new Date().today()} ${new Date().timeNow()}`;
-        console.log(event.target);
-        if (
-          event.target[1].value.match(
-            /(?=.*(?:^|\W)meaning(?:$|\W))+(?=.*(?:^|\W)life(?:$|\W))/i
-          )
-        ) {
-          console.log("42");
-          startBall.src = process.env.PUBLIC_URL + `/m8b-images/magic8ball_mol.png`;
-          startBall.reDraw();
-          let record = [event.target[1].value, "42", datetime];
-          sessionStorage.setItem(question.getKey(), JSON.stringify(record));
-          theQuestion.reset();
-          testtable.reDraw(getSessionStorage());
-        } else if (
-          event.target[1].value.match(
-            /(?=.*(?:^|\W)answer(?:$|\W))+(?=.*(?:^|\W)everything(?:$|\W))/i
-          )
-        ) {
-          console.log("42");
-          startBall.src = process.env.PUBLIC_URL + "/m8b-images/magic8ball_mol.png";
-          startBall.reDraw();
-          let record = [event.target[1].value, "42", datetime];
-          sessionStorage.setItem(question.getKey(), JSON.stringify(record));
-          theQuestion.reset();
-          testtable.reDraw(getSessionStorage());
-        } else {
-          startBall.src = sourceArray[randomIndex];
-          startBall.reDraw();
-          let record = [event.target[1].value, answerArray[randomIndex], datetime];
-          sessionStorage.setItem(question.getKey(), JSON.stringify(record));
-          theQuestion.reset();
-          testtable.reDraw(getSessionStorage());
-        }
-        const sleep = setTimeout(() => {
-          startBall.src = process.env.PUBLIC_URL + "/m8b-images/magic8ball_start.png";
-          startBall.reDraw();
-        }, 8000);
-      });
-    }
-  }, []);
   return (
-    <div>
-      <SectionTitle>
-        <Goldh1>MAGIC 8 BALL</Goldh1>
-      </SectionTitle>
-      <M8BSection id='magicSection'>
-        <AnimBtn className='animationToggle' id='animationToggle' />
-        <CollapseDoc id='collapsableDoc' />
-        <M8B className='magic8ball' id='magic8ball'>
-          <Ball id='theball' />
-          <Shadow className='shadow' />
-        </M8B>
-        <Question id='theQuestion' action='' method='GET'>
-          <Submit id='submit' />
-        </Question>
-      </M8BSection>
-    </div>
+    <M8BSection>
+      <FlexRow>
+        <M8BFrame
+          src='https://codesandbox.io/embed/magic-8-ball-iocyf?codemirror=1&fontsize=12&theme=dark&view=preview'
+          title='Magic 8 Ball'
+          allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
+          sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
+        ></M8BFrame>
+        <M8BArticle>
+          <Goldh1>MAGIC 8 BALL</Goldh1>
+          <p>Ask a yes or no Question and the Ball will determine your fate.</p>
+          <p>
+            This project is made with 7 Vanilla Java Script classes. CSS is used
+            primarily to position elements in the page. Most styling is done in
+            the JS. Each class component is modular in order to add these
+            components to future projects. They can be added and attached to
+            HMTL elements Dynamically and then positioned using CSS.
+          </p>
+          <p>
+            Creating the collapsable modal for the sandwich icon was challenging
+            in vanilla Java Script. Given further development I would refine the
+            responsive nature of each component.
+          </p>
+          <p>
+            When considering the Design and overall User Experience two features
+            stand out. First is the dark theme. Dark themes while easy on the
+            eyes can make readability a problem. I mitigate this by making the
+            button glow when hovering. The Second is the floating animation.
+            While animations are great for engaging a users attention they are a
+            little too good and can be distracting. For this reason I include
+            the ability to deactivate the animation.
+          </p>
+        </M8BArticle>
+      </FlexRow>
+    </M8BSection>
   );
 }
 

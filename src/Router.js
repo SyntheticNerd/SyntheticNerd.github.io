@@ -23,12 +23,12 @@ export default function MyRouter() {
           {/* Use a slash to denote the home page */}
           <Route index element={<Home />} />
           <Route exact path='/portfolio/' element={<Portfolio />}>
-            <Route exact path='/portfolio/fourCardFeature' element={<FourCardFeature />} />
-            <Route exact path='/portfolio/profileCard1' element={<ProfileCard1 />} />
-            <Route exact path='/portfolio/huddleLanding' element={<HuddlePage />} />
-            <Route exact path='/portfolio/singlePriceGrid' element={<SinglePriceGrid />} />
-            <Route exact path='/portfolio/testimonialGrid' element={<TestimonialGrid />} />
-            <Route exact path='/portfolio/baseApparel' element={<BaseApparel />} />
+            <Route exact path='/portfolio/:page' element={<FourCardFeature />} />
+            <Route exact path='/portfolio/:page' element={<ProfileCard1 />} />
+            <Route exact path='/portfolio/:page' element={<HuddlePage />} />
+            <Route exact path='/portfolio/:page' element={<SinglePriceGrid />} />
+            <Route exact path='/portfolio/:page' element={<TestimonialGrid />} />
+            <Route exact path='/portfolio/:page' element={<BaseApparel />} />
           </Route>
           <Route exact path='about' element={<About />} />
           <Route exact path='contact' element={<Contact />} />

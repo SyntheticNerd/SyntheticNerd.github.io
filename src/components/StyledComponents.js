@@ -190,10 +190,27 @@ export const Tag = styled.p`
 export const SectionTitle = styled.div`
   text-align: left;
   margin: 32px auto 0px 72px;
-  @media(max-width: 700px){
+  @media (max-width: 700px) {
     margin: 32px auto 0px 32px;
-    & > h1{
+    & > h1 {
       font-size: 5vw;
     }
+  }
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const ModalBox = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  z-index: 5;
+  & > div{
+    transform: scale(0.9) translateY(-5%);
   }
 `;
