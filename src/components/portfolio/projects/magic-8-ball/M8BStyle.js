@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const M8BFrame = styled.iframe`
   width: 480px;
   max-width: 100%;
-  height: 700px;
+  height: 620px;
   border: 0;
   border-radius: 4px;
   overflow: hidden;
@@ -26,7 +26,6 @@ export const M8BSection = styled.div`
   background-color: var(--background);
   width: fit-content;
   height: fit-content;
-  margin-top: 64px;
 `;
 
 export const M8BArticle = styled.article`
