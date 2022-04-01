@@ -78,7 +78,7 @@ const theme = {
   preview: true,
 };
 
-export default function FrontEndDev() {
+export default function FrontEndDev({setModal}) {
   const scrollArea = useRef(null);
   const moveArrRight = () => {
     const scrollWidth = scrollArea.current.offsetWidth * 0.67;
@@ -88,6 +88,11 @@ export default function FrontEndDev() {
     const scrollWidth = scrollArea.current.offsetWidth * 0.67;
     scrollArea.current.scrollLeft -= scrollWidth;
   };
+
+  const onClick = ()=>{
+    console.log("click")
+    setModal(true);
+  }
   return (
     <div>
       <SectionTitle><Goldh1>FRONT END MENTOR CHALLENGES</Goldh1></SectionTitle>
@@ -100,7 +105,7 @@ export default function FrontEndDev() {
         </ArrowBtn>
         <Carousel ref={scrollArea}>
           {links.map((link, index) => (
-            <NavLink key={index} to={link.path}>
+            <NavLink key={index} to={link.path} onClick={onClick}>
               <LinkText>{link.name}</LinkText>
               <TagBox>
                 {link.tags.map((tag, index) => (

@@ -24,7 +24,7 @@ export default function MyRouter() {
           <Route index element={<Home />} />
           <Route exact path='/portfolio/' element={<Portfolio />}>
             <Route exact path='/portfolio/fourCardFeature' element={<FourCardFeature />} />
-            <Route exact path='/portfolio/profileCard1 ' element={<ProfileCard1 />} />
+            <Route exact path='/portfolio/profileCard1' element={<ProfileCard1 />} />
             <Route exact path='/portfolio/huddleLanding' element={<HuddlePage />} />
             <Route exact path='/portfolio/singlePriceGrid' element={<SinglePriceGrid />} />
             <Route exact path='/portfolio/testimonialGrid' element={<TestimonialGrid />} />

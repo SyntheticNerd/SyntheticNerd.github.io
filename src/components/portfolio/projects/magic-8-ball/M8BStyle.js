@@ -32,10 +32,13 @@ export const M8BArticle = styled.article`
   width: 40%;
   text-align: left;
   p {
-    margin: 32px 0px;
+    margin: 24px 0px;
     color: rgba(255, 250, 206, 0.8);
   }
   h1 {
     font-size: 2em;
+  }
+  @media(max-width: 900px){
+    width: 80%;
   }
 `;

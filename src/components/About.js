@@ -18,6 +18,8 @@ export default function About() {
           width: "100%",
           maxWidth: "600px",
           top: "0",
+          left: "50%",
+          transform: "translateX(-50%)"
         }}
       ></iframe>
     </div>

@@ -1,4 +1,4 @@
-import { Outlet, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import Modal from "../Modal";
 import FrontEndDev from "./projects/front-end-dev-16/FrontEndDev";
 import { useEffect, useState } from "react";
@@ -15,11 +15,12 @@ export default function Portfolio() {
   }, [params]);
   return (
     <PortfolioPage>
-      <FrontEndDev />
-      <Modal modal={modal} setModal={setModal}>
-        <Outlet />
-      </Modal>
       <Magic8Ball />
+      <FrontEndDev setModal={setModal}/>
+      {/* <Modal modal={modal} setModal={setModal}> */}
+      <Link to="/portfolio">Close</Link>
+        <Outlet />
+      {/* </Modal> */}
     </PortfolioPage>
   );
 }

@@ -30,7 +30,6 @@ export const BALandingPage = styled.div`
     @media (max-width: 900px) {
     --main-margin: 10%;
     --header-size: 2.5em;
-    min-height: 100vh;
     height: fit-content;
     background-size: 100% 100%;
   }`}
@@ -49,7 +48,7 @@ export const ComingSoon = styled.div`
     ` @media (max-width: 900px) {
     text-align: center;
     grid-template-columns: 100%;
-    grid-template-rows: 80px 5fr 2fr 1fr 1fr;
+    grid-template-rows: 80px 4fr 2fr 1fr 1fr;
   }
   @media (max-width: 500px) {
     grid-template-rows: 80px 300px 2fr 1fr 1fr;

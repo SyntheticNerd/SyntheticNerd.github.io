@@ -1,20 +1,22 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ModalBox } from "./StyledComponents";
 
-export default function Modal(props) {
+export default function Modal({ modal, setModal, children }) {
+  // const [open, setOpen] = useState(modal ? modal : false);
   let navigate = useNavigate();
   let btnRef = useRef(null);
+
   function onClose() {
-    props.setModal(false)
+    setModal(false);
     navigate("/portfolio");
   }
 
   return (
-    <ModalBox>
+    <ModalBox open={modal}>
       <div>
         <button onClick={() => onClose()}>Close</button>
-        {props.children}
+        {children}
       </div>
     </ModalBox>
   );

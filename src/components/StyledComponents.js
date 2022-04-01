@@ -38,7 +38,7 @@ export const Carousel = styled.ul`
   position: relative;
   list-style-type: none;
   display: flex;
-  width: 100%;
+  width: ${({width})=>width?width:"100%"};
   padding: 0px 68px;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -66,7 +66,7 @@ export const Carousel = styled.ul`
 export const LgCard = styled.li`
   background-color: var(--elevation2);
   width: 300px;
-  height: 200px;
+  height: 160px;
   margin: 16px;
   display: flex;
   align-items: center;
@@ -189,9 +189,9 @@ export const Tag = styled.p`
 
 export const SectionTitle = styled.div`
   text-align: left;
-  margin: 32px auto 0px 72px;
+  margin: 32px auto 32px 72px;
   @media (max-width: 700px) {
-    margin: 32px auto 0px 32px;
+    margin: 32px auto 32px 32px;
     & > h1 {
       font-size: 5vw;
     }
@@ -203,14 +203,26 @@ export const FlexRow = styled.div`
   justify-content: center;
   align-items: center;
   gap: 64px;
+  @media(max-width: 900px){
+    flex-direction: column;
+  }
 `;
 
 export const ModalBox = styled.div`
   /* position: fixed; */
+  display: ${({open})=>open?"flex":"none"};
   top: 64px;
   width: 100%;
+  height: 100vh;
+  position: fixed;
   z-index: 5;
+  background-color: rgba(220, 56, 42, 0.3);
   & > div{
-    transform: scale(0.9) translateY(-5%);
+    /* transform: scale(0.9) translateY(-5%); */
+    height: 80%;
+    width: 90%;
+    overflow-y: scroll;
+    background-color: #2e2e2e;
   }
+ 
 `;
