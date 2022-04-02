@@ -78,7 +78,7 @@ const theme = {
   preview: true,
 };
 
-export default function FrontEndDev({setModal}) {
+export default function FrontEndDev({ setModal }) {
   const scrollArea = useRef(null);
   const moveArrRight = () => {
     const scrollWidth = scrollArea.current.offsetWidth * 0.67;
@@ -89,13 +89,15 @@ export default function FrontEndDev({setModal}) {
     scrollArea.current.scrollLeft -= scrollWidth;
   };
 
-  const onClick = ()=>{
-    console.log("click")
+  const onClick = () => {
+    console.log("click");
     setModal(true);
-  }
+  };
   return (
     <div>
-      <SectionTitle><Goldh1>FRONT END MENTOR CHALLENGES</Goldh1></SectionTitle>
+      <SectionTitle>
+        <Goldh1>FRONT END MENTOR CHALLENGES</Goldh1>
+      </SectionTitle>
       <div style={{ position: "relative" }}>
         <ArrowBtn direction='left' onClick={moveArrLeft}>
           <BlankIcon />

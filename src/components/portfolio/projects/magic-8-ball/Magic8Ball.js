@@ -19,6 +19,7 @@ function Magic8Ball() {
         <M8BFrame
           title='test'
           src='https://syntheticdesigner.github.io/magic8ball/'
+          id="m8bIframe"
         />
         <M8BArticle>
           <p>Ask a yes or no Question and the Ball will answer.</p>

@@ -7,6 +7,7 @@ export default function About() {
           process.env.PUBLIC_URL +
           "/docs/andrewSchroepferResume10.2021.docx-1.pdf#view=Fit"
         }
+        id="resumeFrame"
         title='Resume'
         scrolling='no'
         style={{
