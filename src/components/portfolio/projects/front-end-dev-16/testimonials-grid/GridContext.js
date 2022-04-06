@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: `Daniel Clifford`,
     title: `Verified Graduate`,
-    imgUrl: `/testimonial-grid-images/image-daniel.jpg`,
+    imgUrl: `/dev16Images/testimonial-grid-images/image-daniel.jpg`,
     mainQuote: `I received a job offer mid-course, and the subjects I learned were current, if not more so,
     in the company I joined. I honestly feel I got every penny’s worth.`,
     fullQuote: `“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: `Jonathan Walters`,
     title: `Verified Graduate`,
-    imgUrl: `/testimonial-grid-images/image-jonathan.jpg`,
+    imgUrl: `/dev16Images/testimonial-grid-images/image-jonathan.jpg`,
     mainQuote: `The team was very supportive and kept me motivated`,
     fullQuote: `“I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
     for a big company. This was one of the best investments I’ve made in myself. ”`,
@@ -24,7 +24,7 @@ const testimonials = [
   {
     name: `Kira Whittle`,
     title: `Verified Graduate`,
-    imgUrl: `/testimonial-grid-images/image-kira.jpg`,
+    imgUrl: `/dev16Images/testimonial-grid-images/image-kira.jpg`,
     mainQuote: `  Such a life-changing experience. Highly recommended!`,
     fullQuote: `“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
     professionals who can help me learn programming step by step. I was encouraged to enroll by a former
@@ -38,7 +38,7 @@ const testimonials = [
   {
     name: `Jeanette Harmon`,
     title: `Verified Graduate`,
-    imgUrl: `/testimonial-grid-images/image-jeanette.jpg`,
+    imgUrl: `/dev16Images/testimonial-grid-images/image-jeanette.jpg`,
     mainQuote: `An overall wonderful and rewarding experience`,
     fullQuote: `“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
                 while doing something I love. ”`,
@@ -46,7 +46,7 @@ const testimonials = [
   {
     name: `Patrick Abrams`,
     title: `Verified Graduate`,
-    imgUrl: `/testimonial-grid-images/image-patrick.jpg`,
+    imgUrl: `/dev16Images/testimonial-grid-images/image-patrick.jpg`,
     mainQuote: `Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
     learning from their experiences was easy.`,
     fullQuote: `“ The staff seem genuinely concerned about my progress which I find really refreshing. The program

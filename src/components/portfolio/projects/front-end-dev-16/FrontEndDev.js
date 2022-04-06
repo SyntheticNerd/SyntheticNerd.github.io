@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import {
-  Carousel,
   LgCard,
   FullPreview,
   LinkText,
@@ -10,18 +9,20 @@ import {
   Tag,
   SectionTitle,
   Goldh1,
+  CarouselList,
 } from "../../../StyledComponents";
 import SinglePriceGrid from "./single-price-grid/SinglePriceGrid";
 import ProfileCard1 from "./profile-card-1/ProfileCard1";
 import FourCardFeature from "./four-card-feature/FourCardFeature";
 import TestimonialGrid from "./testimonials-grid/TestimonialGrid";
 import HuddlePage from "./huddle-landing-page/HuddlePage";
-import BaseApparel from "./base-apperal/BaseApparel";
+import BaseApparel from "./base-apparel/BaseApparel";
 import { ThemeProvider } from "styled-components";
 import { ReactComponent as BlankIcon } from "../../../../icons/blankIcon.svg";
 import { ReactComponent as ArrowRight } from "../../../../icons/arrowRight.svg";
 import { ReactComponent as ArrowLeft } from "../../../../icons/arrowLeft.svg";
 import React from "react";
+import SignUpApp from "./sign-up-form-main/SignUpApp";
 
 // const linkStyle = {
 //   height: "100%",
@@ -30,6 +31,13 @@ import React from "react";
 // };
 
 const links = [
+  {
+    name: "Sign Up Landing",
+    path: "signUpLanding",
+    component: <SignUpApp />,
+    scale: 0.19,
+    tags: ["Custom CSS Art", "Mobile Friendly"],
+  },
   {
     name: "Huddle Landing",
     path: "huddleLanding",
@@ -105,7 +113,7 @@ export default function FrontEndDev({ setModal }) {
             <ArrowLeft />
           </i>
         </ArrowBtn>
-        <Carousel ref={scrollArea}>
+        <CarouselList ref={scrollArea}>
           {links.map((link, index) => (
             <NavLink key={index} to={link.path} onClick={onClick}>
               <LinkText>{link.name}</LinkText>
@@ -121,7 +129,7 @@ export default function FrontEndDev({ setModal }) {
               </LgCard>
             </NavLink>
           ))}
-        </Carousel>
+        </CarouselList>
         <ArrowBtn direction='right' onClick={moveArrRight}>
           <BlankIcon />
           <i>

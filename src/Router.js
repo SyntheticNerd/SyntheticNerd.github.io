@@ -12,8 +12,9 @@ import FourCardFeature from "./components/portfolio/projects/front-end-dev-16/fo
 import ProfileCard1 from "./components/portfolio/projects/front-end-dev-16/profile-card-1/ProfileCard1";
 import SinglePriceGrid from "./components/portfolio/projects/front-end-dev-16/single-price-grid/SinglePriceGrid";
 import TestimonialGrid from "./components/portfolio/projects/front-end-dev-16/testimonials-grid/TestimonialGrid";
-import BaseApparel from "./components/portfolio/projects/front-end-dev-16/base-apperal/BaseApparel";
+import BaseApparel from "./components/portfolio/projects/front-end-dev-16/base-apparel/BaseApparel";
 import HuddlePage from "./components/portfolio/projects/front-end-dev-16/huddle-landing-page/HuddlePage";
+import SignUpApp from "./components/portfolio/projects/front-end-dev-16/sign-up-form-main/SignUpApp";
 
 export default function MyRouter() {
   return (
@@ -29,10 +30,11 @@ export default function MyRouter() {
             <Route exact path='/portfolio/singlePriceGrid' element={<SinglePriceGrid />} />
             <Route exact path='/portfolio/testimonialGrid' element={<TestimonialGrid />} />
             <Route exact path='/portfolio/baseApparel' element={<BaseApparel />} />
+            <Route exact path='/portfolio/signUpLanding' element={<SignUpApp />} />
           </Route>
           <Route exact path='about' element={<About />} />
           <Route exact path='contact' element={<Contact />} />
-          {/* <Route path="catagory/:catagoryId" element={<ProductArray />} /> */}
+          {/* <Route path="category/:categoryId" element={<ProductArray />} /> */}
         </Route>
       </Routes>
     </Router>

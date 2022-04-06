@@ -9,11 +9,11 @@ const HuddlePage = () => {
   return (
     <>
       <HuddleMain
-        bgDesk={process.env.PUBLIC_URL + "/huddle-landing-images/bg-desktop.svg"}
-        bgMob={process.env.PUBLIC_URL + "/huddle-landing-images/bg-mobile.svg"}
+        bgDesk={process.env.PUBLIC_URL + "/dev16Images/huddle-landing-images/bg-desktop.svg"}
+        bgMob={process.env.PUBLIC_URL + "/dev16Images/huddle-landing-images/bg-mobile.svg"}
       >
         <header>
-          <Logo src={process.env.PUBLIC_URL + "/huddle-landing-images/logo.svg"} alt='logo' />
+          <Logo src={process.env.PUBLIC_URL + "/dev16Images/huddle-landing-images/logo.svg"} alt='logo' />
         </header>
         <FlexBox>
           <Section1>

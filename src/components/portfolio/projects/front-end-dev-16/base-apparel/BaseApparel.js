@@ -28,19 +28,19 @@ export default function BaseApparel() {
         <ComingSoon
           backgroundImg={
             process.env.PUBLIC_URL +
-            "/base-apparel-images/bg-pattern-desktop.svg"
+            "/dev16Images/base-apparel-images/bg-pattern-desktop.svg"
           }
         >
           <Logo
-            src={process.env.PUBLIC_URL + "/base-apparel-images/logo.svg"}
+            src={process.env.PUBLIC_URL + "/dev16Images/base-apparel-images/logo.svg"}
             alt='Base Apparel'
           />
           <HeroImg
             backgroundImgDesk={
-              process.env.PUBLIC_URL + "/base-apparel-images/hero-desktop.jpg"
+              process.env.PUBLIC_URL + "/dev16Images/base-apparel-images/hero-desktop.jpg"
             }
             backgroundImgMob={
-              process.env.PUBLIC_URL + "/base-apparel-images/hero-mobile.jpg"
+              process.env.PUBLIC_URL + "/dev16Images/base-apparel-images/hero-mobile.jpg"
             }
           />
           <Center>
@@ -54,7 +54,7 @@ export default function BaseApparel() {
           </Center>
           <CallToAction
             errorImg={
-              process.env.PUBLIC_URL + "/base-apparel-images/icon-error.svg"
+              process.env.PUBLIC_URL + "/dev16Images/base-apparel-images/icon-error.svg"
             }
             validState={valid}
           >
@@ -69,7 +69,7 @@ export default function BaseApparel() {
             <SubmitBtn>
               <img
                 src={
-                  process.env.PUBLIC_URL + "/base-apparel-images/icon-arrow.svg"
+                  process.env.PUBLIC_URL + "/dev16Images/base-apparel-images/icon-arrow.svg"
                 }
                 alt='Submit'
               />

@@ -17,7 +17,7 @@ export default function ProfileCard1() {
     <ProfileCard>
       <TopBlock>
         <Banner></Banner>
-        <ProfilePic src={process.env.PUBLIC_URL + "/profile-card-images/image-victor.jpg"} alt={victor.fName + ' ' + victor.lName} />
+        <ProfilePic src={process.env.PUBLIC_URL + "/dev16Images/profile-card-images/image-victor.jpg"} alt={victor.fName + ' ' + victor.lName} />
         <ProfileDetails>
           <Header>Victor Crest<span>26</span></Header>
           <Text1>London</Text1>

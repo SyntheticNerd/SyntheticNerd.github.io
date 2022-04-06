@@ -21,7 +21,7 @@ export const TopBlock = styled.div`
 `;
 export const Banner = styled.div`
   height: 50%;
-  background: url(${process.env.PUBLIC_URL + "/profile-card-images/bg-pattern-card.svg"})
+  background: url(${process.env.PUBLIC_URL + "/dev16Images/profile-card-images/bg-pattern-card.svg"})
     center/100%;
 `;
 export const ProfilePic = styled.img`

@@ -34,11 +34,11 @@ export const Goldp = styled.p`
   opacity: 88%;
 `;
 
-export const Carousel = styled.ul`
+export const CarouselList = styled.ul`
   position: relative;
   list-style-type: none;
   display: flex;
-  width: ${({width})=>width?width:"100%"};
+  width: ${({ width }) => (width ? width : "100%")};
   padding: 0px 68px;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -203,26 +203,32 @@ export const FlexRow = styled.div`
   justify-content: center;
   align-items: center;
   gap: 64px;
-  @media(max-width: 900px){
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
 
 export const ModalBox = styled.div`
   /* position: fixed; */
-  display: ${({open})=>open?"flex":"none"};
+  display: ${({ open }) => (open ? "flex" : "none")};
   top: 64px;
   width: 100%;
   height: 100vh;
   position: fixed;
   z-index: 5;
   background-color: rgba(220, 56, 42, 0.3);
-  & > div{
+  & > div {
     /* transform: scale(0.9) translateY(-5%); */
     height: 80%;
     width: 90%;
     overflow-y: scroll;
     background-color: #2e2e2e;
   }
- 
+`;
+
+export const Transform3D = styled.div`
+  position: relative;
+  width: 70%;
+  /* border: 2px solid red; */
+  transform: perspective(100px) rotateX(-0.5deg) rotateY(3deg) scale(0.8);
 `;
