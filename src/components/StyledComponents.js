@@ -232,3 +232,18 @@ export const Transform3D = styled.div`
   /* border: 2px solid red; */
   transform: perspective(100px) rotateX(-0.5deg) rotateY(3deg) scale(0.8);
 `;
+
+export const Article = styled.article`
+  width: 40%;
+  text-align: left;
+  p {
+    margin: 24px 0px;
+    color: rgba(255, 250, 206, 0.8);
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  @media(max-width: 900px){
+    width: 80%;
+  }
+`;

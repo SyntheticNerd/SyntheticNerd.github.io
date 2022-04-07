@@ -28,17 +28,17 @@ export const M8BSection = styled.div`
   height: fit-content;
 `;
 
-export const M8BArticle = styled.article`
-  width: 40%;
-  text-align: left;
-  p {
-    margin: 24px 0px;
-    color: rgba(255, 250, 206, 0.8);
-  }
-  h1 {
-    font-size: 2em;
-  }
-  @media(max-width: 900px){
-    width: 80%;
-  }
-`;
+// export const M8BArticle = styled.article`
+//   width: 40%;
+//   text-align: left;
+//   p {
+//     margin: 24px 0px;
+//     color: rgba(255, 250, 206, 0.8);
+//   }
+//   h1 {
+//     font-size: 1.5em;
+//   }
+//   @media(max-width: 900px){
+//     width: 80%;
+//   }
+// `;

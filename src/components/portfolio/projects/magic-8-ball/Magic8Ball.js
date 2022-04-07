@@ -1,5 +1,5 @@
 import React from "react";
-import { FlexRow, Goldh1, SectionTitle } from "../../../StyledComponents";
+import { Article, FlexRow, Goldh1, SectionTitle } from "../../../StyledComponents";
 import { M8BArticle, M8BFrame, M8BSection } from "./M8BStyle";
 
 function Magic8Ball() {
@@ -21,7 +21,7 @@ function Magic8Ball() {
           src='https://syntheticdesigner.github.io/magic8ball/'
           id="m8bIframe"
         />
-        <M8BArticle>
+        <Article>
           <p>Ask a yes or no Question and the Ball will answer.</p>
           <p>
             I created this project with 7 Vanilla Java Script classes. CSS is
@@ -43,7 +43,7 @@ function Magic8Ball() {
             little too good and can be distracting. For this reason I include
             the ability to deactivate the animation.
           </p>
-        </M8BArticle>
+        </Article>
       </FlexRow>
     </M8BSection>
   );
