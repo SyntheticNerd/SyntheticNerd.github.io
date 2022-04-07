@@ -1,8 +1,6 @@
 import React from "react";
 import { Article, FlexRow, Goldh1, SectionTitle } from "../../../StyledComponents";
-import { M8BFrame } from "../magic-8-ball/M8BStyle";
-import Tetris from "./tetris-src/components/Tetris";
-import { TetrisPortfolioBox } from "./TPStyles";
+import { TetrisPortfolioBox, TetrisFrame } from "./TPStyles";
 
 export default function TetrisProject() {
   return (
@@ -30,7 +28,7 @@ export default function TetrisProject() {
           </p>
         </Article>
         {/* <Tetris /> */}
-        <M8BFrame
+        <TetrisFrame
           title='test'
           src='https://syntheticdesigner.github.io/tetris-react/'
           id="m8bIframe"

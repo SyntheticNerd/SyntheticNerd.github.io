@@ -15,13 +15,13 @@ export default function Portfolio() {
   }, [params]);
   return (
     <PortfolioPage>
-      <TetrisProject/>
-      <Magic8Ball />
-      <FrontEndDev setModal={setModal}/>
+      <FrontEndDev setModal={setModal} />
       {/* <Modal modal={modal} setModal={setModal}> */}
-      <Link to="/portfolio">Close</Link>
-        <Outlet />
+      <Link to='/portfolio'>Close</Link>
+      <Outlet />
       {/* </Modal> */}
+      <TetrisProject />
+      <Magic8Ball />
     </PortfolioPage>
   );
 }
