@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const M8BFrame = styled.iframe`
   width: 480px;
   max-width: 100%;
-  height: 620px;
+  height: min(620px, 140vw);
   border: 0;
   border-radius: 4px;
   overflow: hidden;

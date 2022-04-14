@@ -10,7 +10,7 @@ export const TetrisFrame = styled.iframe`
   max-width: 100%;
   max-height: calc(100vh - 64px);
   height: calc(667px - calc(50vw - 250px));
-  min-height: 600px;
+  min-height: 480px;
   border: 0;
   border-radius: 4px;
   overflow: hidden;

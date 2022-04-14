@@ -192,9 +192,12 @@ export const SectionTitle = styled.div`
   margin: 32px auto;
   padding-left: 96px;
   @media (max-width: 700px) {
-    margin: 32px auto 32px 32px;
+    /* margin: 32px auto 32px 32px; */
+    padding: 0;
+    margin: 16px auto;
     & > h1 {
-      font-size: 5vw;
+      text-align: center;
+      font-size: 1em;
     }
   }
 `;
@@ -206,6 +209,8 @@ export const FlexRow = styled.div`
   gap: 64px;
   @media (max-width: 900px) {
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 `;
 
@@ -244,7 +249,7 @@ export const Article = styled.article`
   h1 {
     font-size: 1.5em;
   }
-  @media(max-width: 900px){
+  @media (max-width: 900px) {
     width: 80%;
   }
 `;
