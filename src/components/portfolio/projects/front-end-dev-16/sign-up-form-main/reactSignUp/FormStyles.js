@@ -37,23 +37,23 @@ export const SignUpForm = styled.form`
   }
 `;
 export const InputWrap = styled.div`
-  border: 1.5px solid
+  border: 2px solid
     ${({ valid }) => (valid === "true" ? `lightgrey` : `hsl(0, 100%, 74%)`)};
   border-radius: 0.3em;
   position: relative;
   display: flex;
   &:focus-within {
-    border: 1px solid
+    border: 2px solid
       ${({ valid }) =>
         valid === "true" ? `hsl(249, 10%, 26%)` : `hsl(0, 100%, 74%)`};
     &:hover {
-      border: 1px solid
+      border: 2px solid
         ${({ valid }) =>
           valid === "true" ? `hsl(249, 10%, 26%)` : `hsl(0, 100%, 74%)`};
     }
   }
   &:hover {
-    border: 1px solid
+    border: 2px solid
       ${({ valid }) =>
         valid === "true" ? `hsl(246, 25%, 77%)` : `hsl(0, 100%, 74%)`};
   }

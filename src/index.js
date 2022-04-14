@@ -6,11 +6,11 @@ import MyRouter from "./Router";
 import { CSSVariables } from "./components/StyledComponents";
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <CSSVariables>
       <MyRouter />
-    </CSSVariables>
-  </React.StrictMode>,
+    </CSSVariables>,
+  // </React.StrictMode>,
   document.getElementById("root")
 );
 

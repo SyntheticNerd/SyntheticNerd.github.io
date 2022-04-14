@@ -189,7 +189,8 @@ export const Tag = styled.p`
 
 export const SectionTitle = styled.div`
   text-align: left;
-  margin: 32px auto 32px 72px;
+  margin: 32px auto;
+  padding-left: 96px;
   @media (max-width: 700px) {
     margin: 32px auto 32px 32px;
     & > h1 {
@@ -201,7 +202,7 @@ export const SectionTitle = styled.div`
 export const FlexRow = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 64px;
   @media (max-width: 900px) {
     flex-direction: column;

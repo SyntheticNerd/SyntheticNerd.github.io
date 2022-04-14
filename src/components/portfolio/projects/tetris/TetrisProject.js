@@ -1,5 +1,10 @@
 import React from "react";
-import { Article, FlexRow, Goldh1, SectionTitle } from "../../../StyledComponents";
+import {
+  Article,
+  FlexRow,
+  Goldh1,
+  SectionTitle,
+} from "../../../StyledComponents";
 import { TetrisPortfolioBox, TetrisFrame } from "./TPStyles";
 
 export default function TetrisProject() {
@@ -9,29 +14,24 @@ export default function TetrisProject() {
         <Goldh1>Tetris</Goldh1>
       </SectionTitle>
       <FlexRow>
-      <Article>
+        <Article>
           <p>
-            This is a simple game of Tetris. You can use the arrow keys and 
+            You can use the arrow keys or the buttons provided on the screen. To
+            keep the game fair and challenging pausing the game will require a
+            restart.
           </p>
           <p>
-            Creating the collapsable modal for the sandwich icon was challenging
-            in vanilla Java Script. Given further development I would refine the
-            responsive nature of each component.
+            
           </p>
           <p>
-            <b>Design/UX considerations:</b> Dark themes while easy on the eyes
-            can make readability a problem. I mitigate this by making text glow
-            when hovering. The Second is the floating animation. While
-            animations are great for engaging a users attention they are a
-            little too good and can be distracting. For this reason I include
-            the ability to deactivate the animation.
+            
           </p>
         </Article>
         {/* <Tetris /> */}
         <TetrisFrame
           title='test'
           src='https://syntheticdesigner.github.io/tetris-react/'
-          id="m8bIframe"
+          id='m8bIframe'
         />
       </FlexRow>
     </TetrisPortfolioBox>

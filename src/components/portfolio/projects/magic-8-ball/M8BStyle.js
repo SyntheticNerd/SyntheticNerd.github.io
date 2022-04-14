@@ -8,7 +8,6 @@ export const M8BFrame = styled.iframe`
   border-radius: 4px;
   overflow: hidden;
   border: none;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
 `;
 export const M8BSection = styled.div`
   --background: #101010;
@@ -24,7 +23,9 @@ export const M8BSection = styled.div`
   --textColorDisabledHover: rgba(250, 50, 0, 0.8);
   color: var(--textColorPrimary);
   background-color: var(--background);
-  width: fit-content;
+  /* width: fit-content; */
+  max-width: 1300px;
+  margin: auto;
   height: fit-content;
 `;
 
