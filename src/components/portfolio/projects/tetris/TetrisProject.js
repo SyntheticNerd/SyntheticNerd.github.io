@@ -23,9 +23,6 @@ export default function TetrisProject() {
           <p>
             
           </p>
-          <p>
-            
-          </p>
         </Article>
         {/* <Tetris /> */}
         <TetrisFrame

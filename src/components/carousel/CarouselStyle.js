@@ -6,6 +6,7 @@ export const CarouselWrapper = styled.div`
   width: ${({ width }) => (width ? width : "100%")};
   & > ul {
     list-style-type: none;
+    align-items: center;
     display: flex;
     width: 100%;
     padding: 0px 68px;

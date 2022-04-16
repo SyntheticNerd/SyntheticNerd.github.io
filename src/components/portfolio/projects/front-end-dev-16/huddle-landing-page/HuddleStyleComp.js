@@ -19,8 +19,8 @@ export const HuddleMain = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 16px 16px var(--shadow1);
-  -webkit-transform: scale(0.88);
-  transform: scale(0.88);
+  /* -webkit-transform: scale(0.88); */
+  /* transform: scale(0.88); */
   
   @media(max-width: 1000px){
     background: no-repeat top/100% var(--violet) url(${({ bgDesk, bgMob, theme }) => bgMob && !theme.preview ? `${bgMob}` : `${bgDesk}`});
@@ -29,7 +29,7 @@ export const HuddleMain = styled.div`
     !theme.preview &&
     `
     height: fit-content;
-    width: auto;
+    width: 100%;
     @media (max-width: 1000px) {
     padding: 0px 32px;
     min-height: fit-content;
@@ -111,6 +111,7 @@ export const RegCont = styled.div`
     @media (max-width: 1000px) {
     text-align: center;
     width: 100%;
+    padding-left: 0px;
   }`}
 `;
 export const MainH1 = styled.h1`

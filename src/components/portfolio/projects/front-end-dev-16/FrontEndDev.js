@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   LgCard,
@@ -23,6 +23,7 @@ import { ReactComponent as ArrowRight } from "../../../../icons/arrowRight.svg";
 import { ReactComponent as ArrowLeft } from "../../../../icons/arrowLeft.svg";
 import React from "react";
 import SignUpApp from "./sign-up-form-main/SignUpApp";
+import Modal from "../../../modal/Modal";
 
 // const linkStyle = {
 //   height: "100%",
@@ -86,8 +87,10 @@ const theme = {
   preview: true,
 };
 
-export default function FrontEndDev({ setModal }) {
+export default function FrontEndDev({ setModal, modal, projectId }) {
   const scrollArea = useRef(null);
+  const [selected, setSelected] = useState(null);
+
   const moveArrRight = () => {
     const scrollWidth = scrollArea.current.offsetWidth * 0.67;
     scrollArea.current.scrollLeft += scrollWidth;
@@ -97,13 +100,23 @@ export default function FrontEndDev({ setModal }) {
     scrollArea.current.scrollLeft -= scrollWidth;
   };
 
-  const onClick = () => {
-    console.log("click");
-    setModal(true);
-  };
+  // const onClick = () => {
+  //   console.log("click");
+  //   setModal(true);
+  // };
+
+  useEffect(() => {
+    if (projectId) {
+      const _project = links.find((project) => {
+        return project.path === projectId;
+      });
+      console.log(_project.component);
+      _project && setSelected(_project.component);
+    }
+  }, [projectId]);
   return (
     <div>
-      <SectionTitle>
+      <SectionTitle style={{ paddingLeft: "96px" }}>
         <Goldh1>FRONT END MENTOR CHALLENGES</Goldh1>
       </SectionTitle>
       <div style={{ position: "relative" }}>
@@ -115,7 +128,11 @@ export default function FrontEndDev({ setModal }) {
         </ArrowBtn>
         <CarouselList ref={scrollArea}>
           {links.map((link, index) => (
-            <NavLink key={index} to={link.path} onClick={onClick}>
+            <NavLink
+              key={index}
+              to={`/portfolio/${link.path}`}
+              // onClick={onClick}
+            >
               <LinkText>{link.name}</LinkText>
               <TagBox>
                 {link.tags.map((tag, index) => (
@@ -137,6 +154,9 @@ export default function FrontEndDev({ setModal }) {
           </i>
         </ArrowBtn>
       </div>
+      <Modal modal={modal} setModal={setModal}>
+        {selected&&selected}
+      </Modal>
     </div>
   );
 }

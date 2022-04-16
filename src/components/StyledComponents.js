@@ -31,7 +31,7 @@ export const Goldp = styled.p`
   -webkit-text-fill-color: transparent;
   /* text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.8); */
   padding: 32px;
-  opacity: 88%;
+  opacity: 100%;
 `;
 
 export const CarouselList = styled.ul`
@@ -190,7 +190,7 @@ export const Tag = styled.p`
 export const SectionTitle = styled.div`
   text-align: left;
   margin: 32px auto;
-  padding-left: 96px;
+  /* padding-left: 96px; */
   @media (max-width: 700px) {
     /* margin: 32px auto 32px 32px; */
     padding: 0;
@@ -204,9 +204,9 @@ export const SectionTitle = styled.div`
 
 export const FlexRow = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* align-items: center; */
-  gap: 64px;
+  /* gap: 64px; */
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
@@ -214,29 +214,34 @@ export const FlexRow = styled.div`
   }
 `;
 
-export const ModalBox = styled.div`
-  /* position: fixed; */
-  display: ${({ open }) => (open ? "flex" : "none")};
-  top: 64px;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 5;
-  background-color: rgba(220, 56, 42, 0.3);
-  & > div {
-    /* transform: scale(0.9) translateY(-5%); */
-    height: 80%;
-    width: 90%;
-    overflow-y: scroll;
-    background-color: #2e2e2e;
-  }
-`;
-
 export const Transform3D = styled.div`
   position: relative;
-  width: 70%;
+  width: 55%;
+  margin: auto;
   /* border: 2px solid red; */
-  transform: perspective(100px) rotateX(-0.5deg) rotateY(3deg) scale(0.8);
+  transform: translateX(5%) rotateY(15deg);
+  transform-style: preserve-3d;
+  iframe {
+    /* transform: scale(0.8); */
+    /* max-height: 570px; */
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+  }
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(
+      50% 50% at 49.94% 50%,
+      #000000 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateX(80deg) translateZ(-350px) translateY(-20%);
+    opacity: 0.8;
+  }
 `;
 
 export const Article = styled.article`

@@ -1,25 +1,26 @@
 import { Link, Outlet, useParams } from "react-router-dom";
-import Modal from "../Modal";
+import Modal from "../modal/Modal";
 import FrontEndDev from "./projects/front-end-dev-16/FrontEndDev";
 import { useEffect, useState } from "react";
 import Magic8Ball from "./projects/magic-8-ball/Magic8Ball";
 import { PortfolioPage } from "./projects/PortfolioStyles";
-import { FlexRow } from "../StyledComponents";
 import TetrisProject from "./projects/tetris/TetrisProject";
 
 export default function Portfolio() {
   const [modal, setModal] = useState(false);
-  const params = useParams();
+  const { projectId } = useParams();
   useEffect(() => {
-    console.log(params);
-  }, [params]);
+    console.log(projectId);
+    projectId && setModal(true);
+    !projectId && setModal(false);
+  }, [projectId]);
   return (
-    <PortfolioPage>
-      <FrontEndDev setModal={setModal} />
-      {/* <Modal modal={modal} setModal={setModal}> */}
-      <Link to='/portfolio'>Close</Link>
-      <Outlet />
-      {/* </Modal> */}
+    <PortfolioPage modal={modal}>
+      <FrontEndDev
+        setModal={setModal}
+        modal={modal}
+        projectId={projectId}
+      />
       <TetrisProject />
       <Magic8Ball />
     </PortfolioPage>

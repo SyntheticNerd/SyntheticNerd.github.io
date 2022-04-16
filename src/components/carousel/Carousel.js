@@ -7,20 +7,19 @@ import { CarouselList, CarouselWrapper } from "./CarouselStyle";
 import { Link } from "react-router-dom";
 
 export default function Carousel({ scrollAmount, children, width, childWidth }) {
-  // const [scrollAmnt, setScrollAmnt] = useState(scrollAmount?scrollAmount:1)
+  const [scrollAmnt, setScrollAmnt] = useState(scrollAmount?scrollAmount:400)
   const scrollArea = useRef(null);
-
   const moveArrRight = () => {
     const scrollWidth =
-      scrollArea.current.offsetWidth * scrollAmount
-        ? scrollAmount / 100
+      scrollArea.current.offsetWidth * scrollAmnt
+        ? scrollAmnt
         : scrollArea.current.offsetWidth;
     scrollArea.current.scrollLeft += scrollWidth;
   };
   const moveArrLeft = () => {
     const scrollWidth =
-      scrollArea.current.offsetWidth * scrollAmount
-        ? scrollAmount / 100
+      scrollArea.current.offsetWidth * scrollAmnt
+        ? scrollAmnt
         : scrollArea.current.offsetWidth;
     scrollArea.current.scrollLeft -= scrollWidth;
   };
