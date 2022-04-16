@@ -24,9 +24,11 @@ export const BALandingPage = styled.div`
   ${({ theme }) =>
     !theme.preview &&
     `
-    height: 100vh;
+    -webkit-transform:scale(1);
+    transform: scale(1);
+    min-height: 100%;
     max-height: 1200px;
-    width: auto;    
+    width: 90vw;    
     @media (max-width: 900px) {
     --main-margin: 10%;
     --header-size: 2.5em;

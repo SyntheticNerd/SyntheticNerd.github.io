@@ -18,12 +18,10 @@ import TestimonialGrid from "./testimonials-grid/TestimonialGrid";
 import HuddlePage from "./huddle-landing-page/HuddlePage";
 import BaseApparel from "./base-apparel/BaseApparel";
 import { ThemeProvider } from "styled-components";
-import { ReactComponent as BlankIcon } from "../../../../icons/blankIcon.svg";
-import { ReactComponent as ArrowRight } from "../../../../icons/arrowRight.svg";
-import { ReactComponent as ArrowLeft } from "../../../../icons/arrowLeft.svg";
 import React from "react";
 import SignUpApp from "./sign-up-form-main/SignUpApp";
 import Modal from "../../../modal/Modal";
+import Dev16Carousel from "./Dev16Carousel";
 
 // const linkStyle = {
 //   height: "100%",
@@ -83,27 +81,8 @@ const links = [
   },
 ];
 
-const theme = {
-  preview: true,
-};
-
 export default function FrontEndDev({ setModal, modal, projectId }) {
-  const scrollArea = useRef(null);
   const [selected, setSelected] = useState(null);
-
-  const moveArrRight = () => {
-    const scrollWidth = scrollArea.current.offsetWidth * 0.67;
-    scrollArea.current.scrollLeft += scrollWidth;
-  };
-  const moveArrLeft = () => {
-    const scrollWidth = scrollArea.current.offsetWidth * 0.67;
-    scrollArea.current.scrollLeft -= scrollWidth;
-  };
-
-  // const onClick = () => {
-  //   console.log("click");
-  //   setModal(true);
-  // };
 
   useEffect(() => {
     if (projectId) {
@@ -114,48 +93,15 @@ export default function FrontEndDev({ setModal, modal, projectId }) {
       _project && setSelected(_project.component);
     }
   }, [projectId]);
+
   return (
     <div>
       <SectionTitle style={{ paddingLeft: "96px" }}>
         <Goldh1>FRONT END MENTOR CHALLENGES</Goldh1>
       </SectionTitle>
-      <div style={{ position: "relative" }}>
-        <ArrowBtn direction='left' onClick={moveArrLeft}>
-          <BlankIcon />
-          <i>
-            <ArrowLeft />
-          </i>
-        </ArrowBtn>
-        <CarouselList ref={scrollArea}>
-          {links.map((link, index) => (
-            <NavLink
-              key={index}
-              to={`/portfolio/${link.path}`}
-              // onClick={onClick}
-            >
-              <LinkText>{link.name}</LinkText>
-              <TagBox>
-                {link.tags.map((tag, index) => (
-                  <Tag key={index}>{tag}</Tag>
-                ))}
-              </TagBox>
-              <LgCard>
-                <FullPreview scale={link.scale}>
-                  <ThemeProvider theme={theme}>{link.component}</ThemeProvider>
-                </FullPreview>
-              </LgCard>
-            </NavLink>
-          ))}
-        </CarouselList>
-        <ArrowBtn direction='right' onClick={moveArrRight}>
-          <BlankIcon />
-          <i>
-            <ArrowRight />
-          </i>
-        </ArrowBtn>
-      </div>
-      <Modal modal={modal} setModal={setModal}>
-        {selected&&selected}
+      <Dev16Carousel links={links} />
+      <Modal modal={modal} setModal={setModal} top="64px" height="calc(100vh-64px)">
+        {selected && selected}
       </Modal>
     </div>
   );

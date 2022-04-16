@@ -2,19 +2,28 @@ import styled from "styled-components";
 
 export const App = styled.div`
   position: relative;
-  -webkit-transform: scale(0.88);
-  transform: scale(0.88);
+  /* -webkit-transform: scale(0.88);
+  transform: scale(0.88); */
   background-color: hsl(0, 100%, 74%);
+  ${({ theme }) =>
+    !theme.preview &&
+    `
+    width: 90vw;
+    `}
 `;
 
 export const ContentWrapper = styled.div`
   font-family: "Poppins";
   color: white;
-  min-width: 100%;
-  max-width: 1440px;
-  padding: 80px 10%;
+  width: 100%;
+  /* max-width: 1440px; */
+  height: fit-content;
+  min-height: 100%;
+  padding: 32px 10%;
   margin: auto;
   text-align: left;
+
+  /* padding-top: 32px; */
   //Background
   background-image: url(${process.env.PUBLIC_URL + "/dev16Images/signUpImages/bg-intro-desktop.png"});
   background-color: hsl(0, 100%, 74%);

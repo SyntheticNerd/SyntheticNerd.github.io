@@ -17,14 +17,19 @@ export const SinglePriceCont = styled.div`
   --text-brand-primary: #2bb3b1;
   --text-white-primary: rgba(255, 255, 255, 0.8);
   --text-white-inactive: rgba(255, 255, 255, 0.5);
-  flex-grow: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: left;
-  scale: 0.88;
-  -webkit-transform:scale(0.88);
+  pointer-events: auto;
+  position: relative;
+  ${({ theme }) =>
+    theme.preview &&
+    `
+      -webkit-transform:scale(0.88);
+      transform:scale(0.88);
+    `}
 `;
 
 export const SignUpBanner = styled.div`
@@ -35,6 +40,7 @@ export const SignUpBanner = styled.div`
   margin: 32px auto;
   background-color: var(--background-primary);
   overflow: hidden;
+  pointer-events: auto;
   ${({ theme }) =>
     !theme.preview &&
     `@media (max-width: 699px) {

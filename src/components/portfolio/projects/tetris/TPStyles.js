@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const TetrisPortfolioBox = styled.div`
 max-width: 1300px;
+width: calc(100vw - 192px);
 margin: auto;
 `;
 

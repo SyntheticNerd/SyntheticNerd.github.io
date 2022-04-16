@@ -24,6 +24,7 @@ export const M8BSection = styled.div`
   color: var(--textColorPrimary);
   background-color: var(--background);
   /* width: fit-content; */
+  width: min(calc(100vw - 192px), 99vw);
   max-width: 1300px;
   margin: auto;
   height: fit-content;

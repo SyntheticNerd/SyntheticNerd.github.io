@@ -1,13 +1,10 @@
-import { FlexRow, Goldh1, Goldp, Transform3D } from "./StyledComponents";
-import Carousel from "./carousel/Carousel";
-import { M8BFrame } from "./portfolio/projects/magic-8-ball/M8BStyle";
-import { TetrisFrame } from "./portfolio/projects/tetris/TPStyles";
+import React from 'react'
+import Carousel from '../carousel/Carousel'
+import { Goldp, Transform3D } from '../StyledComponents'
 
-export default function Home() {
+export default function LeftCarousel() {
   return (
-    <>
-      <Goldh1>Elegant Design / {`<Robust Code>`} </Goldh1>
-      <div
+    <div
         style={{
           display: "flex",
           maxWidth: "80%",
@@ -64,6 +61,5 @@ export default function Home() {
           </Goldp>
         </div>
       </div>
-    </>
-  );
+  )
 }

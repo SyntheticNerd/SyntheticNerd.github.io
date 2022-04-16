@@ -9,15 +9,19 @@ export const Content = styled.div`
   /* height: 720px; */
   width: 1800px;
   padding: 32px 0px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(0.88);
   transform: scale(0.88);
+  background-color: none;
+
   ${({ theme }) =>
     !theme.preview &&
     `
-        height: fit-content;
-        min-height: 100vh;
-        width: 100vw;
+      background-color: #101010;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      height: fit-content;
+      min-height: 100%;
+      width: 100vw;
     `}
 `;
 export const GridContainer = styled.div`
@@ -67,7 +71,7 @@ export const GridChild = styled.div`
   text-align: left;
   ${(props) => {
     switch (props.section % 5) {
-      case 0://yah this might look a bit crazy basically it switch the style for every element in the array cycling through 5 possible styles
+      case 0: //yah this might look a bit crazy basically it switch the style for every element in the array cycling through 5 possible styles
         return `
         grid-area: box1;
         position: relative;
@@ -119,20 +123,21 @@ export const GridChild = styled.div`
 `;
 export const ProfileInfo = styled.div`
   display: flex;
-  height: 40px;
+  height: fit-content;
 `;
 export const ProfilePic = styled.img`
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   border: 2px solid white;
 `;
 export const InfoContainer = styled.div`
   margin-left: 16px;
+  height: fit-content;
 `;
 export const Name = styled.strong`
   z-index: 1;
-  font-size: 1.2em;
+  font-size: 1.1em;
 `;
 export const Position = styled.p`
   opacity: 70%;
@@ -140,11 +145,12 @@ export const Position = styled.p`
 export const MainQuote = styled.div``;
 export const MainText = styled.h1`
   z-index: 3;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 16px 0px;
 `;
 export const FullQuote = styled.div``;
 export const SubText = styled.p`
   z-index: 2;
   opacity: 70%;
+  font-size: 0.9em;
 `;

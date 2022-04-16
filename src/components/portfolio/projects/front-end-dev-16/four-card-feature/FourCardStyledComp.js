@@ -3,13 +3,11 @@ export const FourCardFeatureCont = styled.div`
   --text1: hsl(234, 12%, 34%);
   --text2: hsl(229, 6%, 66%);
   --text3: hsl(0, 0%, 98%);
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  -webkit-transform:scale(0.88);
-  transform: scale(0.88);
-  box-shadow: 0px 8px 16px var(--shadow1);
+  padding: 16px 128px;
+  background-color: #101010;  
 `;
 export const IntroCont = styled.div`
   margin-top: 16px;

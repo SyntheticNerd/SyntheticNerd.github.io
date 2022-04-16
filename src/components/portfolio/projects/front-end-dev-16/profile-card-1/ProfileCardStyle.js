@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  flex-grow: 1;
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 `;
 export const ProfileCard = styled.div`
   width: 400px;
@@ -35,7 +34,7 @@ export const ProfilePic = styled.img`
   transform: translate(-50%, -50%);
 `;
 export const ProfileDetails = styled.div`
-  margin-top: 6em;
+  margin-top: 5em;
   text-align: center;
 `;
 export const Header = styled.h1`
@@ -52,10 +51,10 @@ export const Header = styled.h1`
 export const Text1 = styled.p`
   font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.4);
-  margin-top: 8px;
+  margin-bottom: 8px
 `;
 export const BottomBlock = styled.div`
-  margin-top: 32px;
+  margin-top: 16px;
   display: flex;
   justify-content: space-around;
   height: 87px;

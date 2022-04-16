@@ -4,7 +4,7 @@ export const SignUpForm = styled.form`
   display: flex;
   flex-direction: column;
   padding: 5%;
-  gap: 24px 24px;
+  gap: 12px;
   border-radius: 0.5em;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
   background-color: white;
@@ -81,7 +81,7 @@ export const InputWrap = styled.div`
   &::after {
     ${({ valid }) => valid === "true" && `display: none`}
     content: "";
-    background-image: url(${process.env.PUBLIC_URL + "/images/icon-error.svg"});
+    background-image: url(${process.env.PUBLIC_URL + "/dev16Images/signUpImages/icon-error.svg"});
     padding: 12px;
     border-radius: 50%;
     position: absolute;

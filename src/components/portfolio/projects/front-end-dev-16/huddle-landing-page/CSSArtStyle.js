@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ArtCont = styled.div`
-  width: 100%;
+  width: 90%;
   position: relative;
   padding: 32px 0px;
 `;

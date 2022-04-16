@@ -1,4 +1,4 @@
-//practice Context
+//practicing Context api yes it is completely overkill
 import { createContext} from "react";
 const testimonials = [
   {

@@ -219,7 +219,7 @@ export const Transform3D = styled.div`
   width: 55%;
   margin: auto;
   /* border: 2px solid red; */
-  transform: translateX(5%) rotateY(15deg);
+  transform: translateX(5%) rotateY(${({rotateY})=>rotateY?rotateY:"15deg"});
   transform-style: preserve-3d;
   iframe {
     /* transform: scale(0.8); */
@@ -239,7 +239,7 @@ export const Transform3D = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    transform: rotateX(80deg) translateZ(-350px) translateY(-20%);
+    transform: rotateX(80deg) translateZ(-350px) translateY(-20%) translateX(-5%);
     opacity: 0.8;
   }
 `;

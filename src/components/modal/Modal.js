@@ -1,24 +1,54 @@
-import { useNavigate, useParams } from "react-router-dom";
-import { useRef, useState } from "react";
-import { ChildWrapper, ModBox, ModBG, ModControls } from "./ModalStyles";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { ChildWrapper, ModBox, ModBG } from "./ModalStyles";
 
-export default function Modal({ modal, setModal, children, homePage}) {
+export default function Modal({
+  modal,
+  setModal,
+  children,
+  top,
+  bottom,
+  left,
+  right,
+  width,
+  height,
+  zIndex,
+  bgColor,
+  bgImage,
+  padding,
+}) {
   // const [_modal, _setModal] = useState(modal ? modal : false);
   let navigate = useNavigate();
-  let btnRef = useRef(null);
 
   function onClose() {
     setModal(false);
-    navigate(homePage?homePage:"/portfolio");
+    navigate(-1);
   }
 
   return (
-    <ModBox open={modal}>
-      {/* <ModBG/> */}
+    <ModBox
+      open={modal}
+      top={top}
+      bottom={bottom}
+      left={left}
+      right={right}
+      width={width}
+      height={height}
+      zIndex={zIndex}
+      bgColor={bgColor}
+      bgImage={bgImage}
+      padding={padding}
+    >
+      <ModBG
+        onClick={() => onClose()}
+        top={top}
+        bottom={bottom}
+        left={left}
+        right={right}
+        width={width}
+        height={height}
+      />
       <ChildWrapper>{children}</ChildWrapper>
-      <ModControls>
-        <button onClick={() => onClose()}>Close</button>
-      </ModControls>
     </ModBox>
   );
 }
