@@ -6,8 +6,15 @@ export const FourCardFeatureCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px 128px;
-  background-color: #101010;  
+  padding: 32px 16px;
+  background-color: #101010;
+  height: 100%;
+  min-height: fit-content;
+  position: relative;
+  min-width: 80vw;
+  /* @media(min-width: 900px){
+    padding: 32px 128px;
+  } */
 `;
 export const IntroCont = styled.div`
   margin-top: 16px;
@@ -22,10 +29,10 @@ export const IntroCont = styled.div`
 `;
 export const CardCont = styled.div`
   position: relative;
-  width: 400px;
+  max-width: 400px;
   height: 250px;
   box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.4);
-  margin: 28px;
+  margin: 16px 16px;
   padding: 32px;
   border-radius: 8px;
   background-color: #1e1e1e;
@@ -36,8 +43,9 @@ export const CardCont = styled.div`
     !theme.preview &&
     `
       @media (max-width: 900px) {
-        width: 80%;
+        width: 100%;
         max-width: 400px;
+        margin: 16px 0px;
       }
   `}
   &:hover {
@@ -57,7 +65,7 @@ export const FourCard = styled.div`
       max-width: 1000px;
       flex-wrap: wrap;
       }
-      @media (max-width: 900px) {
+      @media (max-width: 964px) {
         flex-direction: column;
       }`}
 `;
@@ -71,7 +79,7 @@ export const TwoCard = styled.div`
     order: 1;
     flex-direction: row;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 964px) {
     flex-direction: column;
   }`}
 `;

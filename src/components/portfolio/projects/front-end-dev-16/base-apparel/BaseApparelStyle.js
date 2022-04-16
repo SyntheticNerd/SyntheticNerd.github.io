@@ -26,7 +26,8 @@ export const BALandingPage = styled.div`
     `
     -webkit-transform:scale(1);
     transform: scale(1);
-    min-height: 100%;
+    height: 100%;
+    min-height: fit-content;
     max-height: 1200px;
     width: 90vw;    
     @media (max-width: 900px) {
@@ -43,17 +44,17 @@ export const ComingSoon = styled.div`
     no-repeat;
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
   grid-template-columns: 60% auto;
   ${({ theme }) =>
     !theme.preview &&
     ` @media (max-width: 900px) {
     text-align: center;
     grid-template-columns: 100%;
-    grid-template-rows: 80px 4fr 2fr 1fr 1fr;
+    grid-template-rows: 80px 4fr 2fr 1fr;
   }
   @media (max-width: 500px) {
-    grid-template-rows: 80px 300px 2fr 1fr 1fr;
+    grid-template-rows: 80px 300px 2fr 1fr;
   }`}
 `;
 
@@ -62,7 +63,7 @@ export const HeroImg = styled.div`
     top/cover no-repeat;
   opacity: 90%;
   grid-column: 2 / 3;
-  grid-row: 1 / 6;
+  grid-row: 1 / 5;
   ${({ theme }) =>
     !theme.preview &&
     `@media (max-width: 900px) {
@@ -122,7 +123,7 @@ export const CallToAction = styled.form`
   display: flex;
   height: 3rem;
   grid-row: 4 / 5;
-  margin: 36px var(--main-margin) 0px;
+  margin: 36px var(--main-margin) 32px;
   &:before {
     ${({ validState }) => validState && `display: none`}
     content: "";
