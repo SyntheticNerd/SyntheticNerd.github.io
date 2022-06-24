@@ -95,7 +95,7 @@ export default function FrontEndDev({ setModal, modal, projectId }) {
   }, [projectId]);
 
   return (
-    <div>
+    <>
       <SectionTitle style={{ width: "80%", margin: "auto" }}>
         <Goldh1>FRONT END MENTOR CHALLENGES</Goldh1>
       </SectionTitle>
@@ -103,6 +103,6 @@ export default function FrontEndDev({ setModal, modal, projectId }) {
       <Modal modal={modal} setModal={setModal} top="64px" height="calc(100vh-64px)">
         {selected && selected}
       </Modal>
-    </div>
+    </>
   );
 }

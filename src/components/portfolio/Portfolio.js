@@ -18,7 +18,6 @@ export default function Portfolio() {
   return (
     <PortfolioPage modal={modal}>
       <PortfolioGrid />
-      
       <FrontEndDev modal={modal} setModal={setModal} projectId={projectId} />
     </PortfolioPage>
   );

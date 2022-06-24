@@ -10,12 +10,11 @@ const AboutWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  grid-template-columns: repeat(2, 1fr);
   margin-bottom: 64px;
-  @media (max-width: 940px) {
-    grid-template-columns: 1fr;
-    gap: 64px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
     width: 90%;
+    gap: 64px;
   }
 `;
 
@@ -26,7 +25,7 @@ const AboutMe = styled.article`
   text-align: left;
   font-size: 1.2em;
 
-  @media (max-width: 940px) {
+  @media (max-width: 1000px) {
     width: 100%;
     padding: 16px;
     font-size: 1em;
@@ -71,11 +70,15 @@ const skills = [
   "Unreal 4",
 ];
 
+let myClassObject;
+const set1 = {"--myVariables" : "translateX(80px)"}
+const set2 = {"--myVariables" : "translateX(80px)"}
+
 export default function About() {
   return (
     <AboutWrapper>
       <GoldContainer>
-        <AboutMe>
+        <AboutMe className={myClassObject}>
           Hello, I'm Andrew, a digital creative, web developer, ux designer, and
           game developer. I create tailor-made digital solutions that fit my
           clients unique brand identity. My solutions aim to use agility and
@@ -87,7 +90,7 @@ export default function About() {
         </AboutMe>
       </GoldContainer>
       <GoldContainer>
-        <MySkills>
+        <MySkills >
           <h1>Skills</h1>
           {skills.map((skill) => (
             <li>{skill}</li>

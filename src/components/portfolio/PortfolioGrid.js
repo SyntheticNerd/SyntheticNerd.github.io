@@ -12,46 +12,101 @@ const PortfolioGridContainer = styled.div`
   display: grid;
 
   gap: 24px;
-  margin: auto;
   width: min-content;
   z-index: 1;
   position: relative;
+  margin-bottom: 64px;
 
-  grid-template-columns: repeat(5, 13vw);
-  grid-template-rows: repeat(10, 12vw);
+  grid-template-columns: 90vw;
+  grid-template-rows: 60vw 60vw 180vw 160vw 120vw 120vw;
+  grid-template-areas:
+    "ka"
+    "sc"
+    "te"
+    "eb"
+    "dg"
+    "st";
 
+  @media (min-width: 490px) {
+    grid-template-columns: 90vw;
+    grid-template-rows: 40vw 40vw 80vw 120vw 120vw 120vw;
     grid-template-areas:
-      "ka ka ka ka ka"
-      "ka ka ka ka ka"
-      "ka ka ka ka ka"
-      "eb eb eb dg dg"
-      "eb eb eb dg dg"
-      "eb eb eb dg dg"
-      "eb eb eb dg dg"
-      ". . st st st"
-      ". . st st st"
-      ". . st st st";
+      "ka"
+      "sc"
+      "te"
+      "eb"
+      "dg"
+      "st";
+  }
+
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(6, 13vw);
+    grid-template-rows: repeat(14, 13vw);
+    grid-template-areas:
+      "ka ka ka ka ka ka"
+      "ka ka ka ka ka ka"
+      "ka ka ka ka ka ka"
+      "ka ka ka ka ka ka"
+      "sc sc sc sc sc sc"
+      "sc sc sc sc sc sc"
+      "sc sc sc sc sc sc"
+      "eb eb eb dg dg dg"
+      "eb eb eb dg dg dg"
+      "eb eb eb dg dg dg"
+      "eb eb eb dg dg dg"
+      "te te te te st st"
+      "te te te te st st"
+      "te te te te st st";
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: repeat(6, 13vw);
+    grid-template-rows: repeat(11, 13vw);
+    grid-template-areas:
+      "ka ka ka ka ka ka"
+      "ka ka ka ka ka ka"
+      "ka ka ka ka ka ka"
+      "sc sc sc sc sc sc"
+      "sc sc sc sc sc sc"
+      "sc sc sc sc sc sc"
+      "eb eb dg dg te te"
+      "eb eb dg dg te te"
+      "eb eb dg dg te te"
+      "st st st st te te"
+      "st st st st . .";
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(6, 13vw);
+    grid-template-rows: repeat(8, 13vw);
+    grid-template-areas:
+      "ka ka ka ka te te"
+      "ka ka ka ka te te"
+      "ka ka ka ka te te"
+      "sc sc sc sc te te"
+      "sc sc sc sc st st"
+      "eb eb dg dg st st"
+      "eb eb dg dg st st"
+      "eb eb dg dg . .";
+  }
 
   @media (min-width: 1600px) {
     grid-template-areas:
       "ka ka ka ka te te te"
       "ka ka ka ka te te te"
+      "ka ka ka ka te te te"
       "st st st sc sc sc sc"
       "st st st sc sc sc sc"
       "st st st dg dg eb eb"
-      "st st st dg dg eb eb"
-      "st st st dg dg eb eb";
+      ". . . dg dg eb eb"
+      ". . . dg dg eb eb";
     grid-template-columns: repeat(7, 10vw);
-    grid-template-rows: repeat(7, 10vw);
-
-    gap: 24px;
+    grid-template-rows: repeat(8, 10vw);
   }
 `;
 
 const GridContainer1 = styled.div`
   position: relative;
-  /* grid-column: 1 / 5;
-  grid-row: 1 / 3; */
   grid-area: ka;
   &::before {
     content: "";
@@ -65,8 +120,6 @@ const GridContainer1 = styled.div`
   }
 `;
 const GridContainer2 = styled.div`
-  /* grid-column: 5 / 8;
-  grid-row: 1 / 3; */
   grid-area: te;
   position: relative;
   &::before {
@@ -81,8 +134,6 @@ const GridContainer2 = styled.div`
   }
 `;
 const GridContainer3 = styled.div`
-  /* grid-column: 1 / 4;
-  grid-row: 3 / 8; */
   grid-area: st;
   position: relative;
   &::before {
@@ -97,8 +148,6 @@ const GridContainer3 = styled.div`
   }
 `;
 const GridContainer4 = styled.div`
-  /* grid-column: 4 / 6;
-  grid-row: 3 / 6; */
   grid-area: dg;
   position: relative;
   &::before {
@@ -113,8 +162,6 @@ const GridContainer4 = styled.div`
   }
 `;
 const GridContainer5 = styled.div`
-  /* grid-column: 6 / 8;
-  grid-row: 3 / 6; */
   grid-area: eb;
   position: relative;
   &::before {
@@ -129,8 +176,6 @@ const GridContainer5 = styled.div`
   }
 `;
 const GridContainer6 = styled.div`
-  /* grid-column: 4 / 8;
-  grid-row: 6 / 8; */
   grid-area: sc;
   position: relative;
   &::before {
