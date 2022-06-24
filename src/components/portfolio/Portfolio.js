@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Magic8Ball from "./projects/magic-8-ball/Magic8Ball";
 import { PortfolioPage } from "./projects/PortfolioStyles";
 import TetrisProject from "./projects/tetris/TetrisProject";
+import Carousel from "../carousel/Carousel";
+import PortfolioGrid from "./PortfolioGrid";
 
 export default function Portfolio() {
   const [modal, setModal] = useState(false);
@@ -15,9 +17,9 @@ export default function Portfolio() {
   }, [projectId]);
   return (
     <PortfolioPage modal={modal}>
+      <PortfolioGrid />
+      
       <FrontEndDev modal={modal} setModal={setModal} projectId={projectId} />
-      <TetrisProject />
-      <Magic8Ball />
     </PortfolioPage>
   );
 }

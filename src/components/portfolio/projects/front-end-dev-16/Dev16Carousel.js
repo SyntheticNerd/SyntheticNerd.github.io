@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import {
   ArrowBtn,
+  CarouselContainer,
   CarouselList,
   FullPreview,
   LgCard,
@@ -30,7 +31,7 @@ export default function Dev16Carousel({ links }) {
     scrollArea.current.scrollLeft -= scrollWidth;
   };
   return (
-    <div style={{ position: "relative" }}>
+    <CarouselContainer >
       <ArrowBtn direction='left' onClick={moveArrLeft}>
         <BlankIcon />
         <i>
@@ -65,6 +66,6 @@ export default function Dev16Carousel({ links }) {
           <ArrowRight />
         </i>
       </ArrowBtn>
-    </div>
+    </CarouselContainer>
   );
 }

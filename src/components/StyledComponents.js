@@ -14,7 +14,6 @@ export const CSSVariables = styled.div`
   --shadow1: rgba(0, 0, 0, 0.5);
   --fontHighEmp: rgba(255, 255, 255, 0.88);
   --fontMedEmp: rgba(255, 255, 255, 0.75);
-
 `;
 
 export const Goldh1 = styled.h1`
@@ -43,16 +42,42 @@ export const Goldp = styled.p`
   opacity: 100%;
 `;
 
+export const CarouselContainer = styled.div`
+  position: relative;
+  width: 80%;
+  margin: auto;
+  background-image: var(--gold-gradient);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--elevation4);
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+  }
+  @media(max-width: 700px){
+    width: 100%;
+  }
+`;
+
 export const CarouselList = styled.ul`
   position: relative;
   list-style-type: none;
   display: flex;
   width: ${({ width }) => (width ? width : "100%")};
-  padding: 0px 68px;
+  padding: 32px 68px;
   overflow-x: scroll;
   scroll-behavior: smooth;
   transition: all 0.6s ease;
+  margin: auto;
+  height: calc(100% - 8px);
+  width: calc(100% - 8px);
+
   /* Hide scrollbar for Chrome, Safari and Opera */
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -70,6 +95,9 @@ export const CarouselList = styled.ul`
       margin: 0px -40px;
     }
   }
+  @media(max-width: 700px){
+    padding: 8px 68px;
+  }
 `;
 
 export const LgCard = styled.li`
@@ -80,7 +108,7 @@ export const LgCard = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.2;
+  opacity: 0.5;
   transition: transform 0.2s, z-index 0.3s;
   -webkit-transition: transform 0.2s, z-index 0.3s;
   box-shadow: 0px 4px 4px var(--shadow1);
@@ -267,5 +295,27 @@ export const Article = styled.article`
   }
   @media (max-width: 900px) {
     width: 80%;
+  }
+`;
+
+export const GoldContainer = styled.div`
+  height: fit-content;
+  width: fit-content;
+  background-image: var(--gold-gradient);
+  padding: 4px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 8px 16px var(--shadow1);
+
+  &::before {
+    content: "";
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    background-color: var(--elevation4);
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 `;

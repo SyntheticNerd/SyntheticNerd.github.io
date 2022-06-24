@@ -96,7 +96,7 @@ export default function FrontEndDev({ setModal, modal, projectId }) {
 
   return (
     <div>
-      <SectionTitle style={{ paddingLeft: "96px" }}>
+      <SectionTitle style={{ width: "80%", margin: "auto" }}>
         <Goldh1>FRONT END MENTOR CHALLENGES</Goldh1>
       </SectionTitle>
       <Dev16Carousel links={links} />

@@ -1,27 +1,28 @@
 import React from "react";
-import { Article, FlexRow, Goldh1, SectionTitle } from "../../../StyledComponents";
+import {
+  Article,
+  FlexRow,
+  Goldh1,
+  SectionTitle,
+} from "../../../StyledComponents";
 import { M8BArticle, M8BFrame, M8BSection } from "./M8BStyle";
 
 function Magic8Ball() {
   return (
     <M8BSection>
-      <SectionTitle>
-        <Goldh1>MAGIC 8 BALL</Goldh1>
-      </SectionTitle>
-      <FlexRow>
-        {/* <M8BFrame
+      {/* <M8BFrame
           src='https://codesandbox.io/embed/magic-8-ball-iocyf?codemirror=1&fontsize=12&theme=dark&view=preview'
           title='Magic 8 Ball'
           allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
           sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
         ></M8BFrame> */}
 
-        <M8BFrame
-          title='test'
-          src='https://syntheticdesigner.github.io/magic8ball/'
-          id="m8bIframe"
-        />
-        <Article>
+      <M8BFrame
+        title='test'
+        src='https://syntheticdesigner.github.io/magic8ball/'
+        id='m8bIframe'
+      />
+      {/* <Article>
           <p>Ask a yes or no Question and the Ball will answer.</p>
           <p>
             I created this project with 7 Vanilla Java Script classes. CSS is
@@ -43,8 +44,7 @@ function Magic8Ball() {
             little too good and can be distracting. For this reason I include
             the ability to deactivate the animation.
           </p>
-        </Article>
-      </FlexRow>
+        </Article> */}
     </M8BSection>
   );
 }

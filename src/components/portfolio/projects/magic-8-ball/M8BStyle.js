@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const M8BFrame = styled.iframe`
-  width: 480px;
-  max-width: 100%;
-  height: min(620px, 140vw);
+  /* width: 480px; */
+  /* max-width: 100%; */
+  /* height: min(620px, 140vw); */
+  height: 100%;
+  width: 100%;
   border: 0;
   border-radius: 4px;
   overflow: hidden;
@@ -24,10 +26,11 @@ export const M8BSection = styled.div`
   color: var(--textColorPrimary);
   background-color: var(--background);
   /* width: fit-content; */
-  width: min(calc(100vw - 192px), 99vw);
-  max-width: 1300px;
+  /* width: min(calc(100vw - 192px), 99vw); */
+  /* max-width: 1300px; */
+  width: 100%;
+  height: 100%;
   margin: auto;
-  height: fit-content;
 `;
 
 // export const M8BArticle = styled.article`

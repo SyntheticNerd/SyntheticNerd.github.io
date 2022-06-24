@@ -8,13 +8,16 @@ export const FourCardFeatureCont = styled.div`
   align-items: center;
   padding: 32px 16px;
   background-color: #101010;
-  height: 100%;
-  min-height: fit-content;
+  /* height: 100%; */
+  max-height: fit-content;
   position: relative;
-  min-width: 80vw;
-  /* @media(min-width: 900px){
-    padding: 32px 128px;
-  } */
+  width: 1440px;
+  ${({ theme }) =>
+    !theme.preview &&
+    `
+      min-width: 80vw;
+
+  `}
 `;
 export const IntroCont = styled.div`
   margin-top: 16px;
@@ -23,7 +26,7 @@ export const IntroCont = styled.div`
   max-width: 560px;
   transition: all 0.3s;
   &:hover {
-    -webkit-transform:scale(1.1);
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 `;
@@ -49,7 +52,7 @@ export const CardCont = styled.div`
       }
   `}
   &:hover {
-    -webkit-transform:scale(1.1);
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 `;

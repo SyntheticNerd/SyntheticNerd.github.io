@@ -26,7 +26,7 @@ const HeroWrapper = styled.div`
       font-size: min(3.5em, max(10vw, 2.5em));
     }
     h2 {
-      font-size: min(3em, max(10vw, 1.8em));
+      font-size: min(3em, max(7vw, 1.8em));
     }
     .name {
       margin-left: 0.2em;
