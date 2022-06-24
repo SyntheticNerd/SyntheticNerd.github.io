@@ -11,6 +11,7 @@ export const CSSVariables = styled.div`
   --elevation2: #1e1e1e;
   --elevation3: #2c2c2c;
   --elevation4: #272727;
+  --elevation5: #353535;
   --shadow1: rgba(0, 0, 0, 0.5);
   --fontHighEmp: rgba(255, 255, 255, 0.88);
   --fontMedEmp: rgba(255, 255, 255, 0.75);
