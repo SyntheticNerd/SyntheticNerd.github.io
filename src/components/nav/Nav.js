@@ -112,10 +112,24 @@ export default function Nav() {
       <NavFolder>
         <LinkList ref={linkList} navModal={navModal}>
           <LinkCont>
-            <NavLink onClick={() => navigate("/")}>
+            <NavLink onClick={() => navigate("/home")}>
               Home
               <TabIndicator
-                currentTab={location.pathname === "/" ? true : false}
+                currentTab={
+                  location.pathname === "/"
+                    ? true
+                    : location.pathname === "/home"
+                    ? true
+                    : false
+                }
+              />
+            </NavLink>
+          </LinkCont>
+          <LinkCont>
+            <NavLink onClick={() => navigate("/about")}>
+              About
+              <TabIndicator
+                currentTab={location.pathname.includes("about") ? true : false}
               />
             </NavLink>
           </LinkCont>
@@ -129,14 +143,7 @@ export default function Nav() {
               />
             </NavLink>
           </LinkCont>
-          <LinkCont>
-            <NavLink onClick={() => navigate("/about")}>
-              About
-              <TabIndicator
-                currentTab={location.pathname.includes("about") ? true : false}
-              />
-            </NavLink>
-          </LinkCont>
+
           <LinkCont>
             <NavLink onClick={() => navigate("/contact")}>
               Contact

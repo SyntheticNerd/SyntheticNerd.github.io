@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Home from "./components/home/Home";
 import Portfolio from "./components/portfolio/Portfolio";
@@ -14,10 +10,7 @@ export default function MyRouter() {
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
-          <Route exact path='/portfolio/' element={<Portfolio />} />
-          <Route exact path='/portfolio/:projectId' element={<Portfolio />}/>
-          <Route exact path='about' element={<Home />} />
-          <Route exact path='contact' element={<Contact />} />
+          <Route exact path=':navigate' element={<Home />} />
         </Route>
       </Routes>
     </Router>

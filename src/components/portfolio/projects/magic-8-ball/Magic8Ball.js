@@ -10,13 +10,6 @@ import { M8BArticle, M8BFrame, M8BSection } from "./M8BStyle";
 function Magic8Ball() {
   return (
     <M8BSection>
-      {/* <M8BFrame
-          src='https://codesandbox.io/embed/magic-8-ball-iocyf?codemirror=1&fontsize=12&theme=dark&view=preview'
-          title='Magic 8 Ball'
-          allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
-          sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
-        ></M8BFrame> */}
-
       <M8BFrame
         title='test'
         src='https://syntheticdesigner.github.io/magic8ball/'
