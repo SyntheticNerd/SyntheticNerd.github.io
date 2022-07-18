@@ -79,7 +79,7 @@ export default function About() {
     <AboutWrapper>
       <GoldContainer>
         <AboutMe className={myClassObject}>
-          Hello, I'm Andrew, a digital creative, web developer, ux designer, and
+          Hello! I'm Andrew. A digital creative, web developer, UX designer, and
           game developer. <br /><br />I create tailor-made digital solutions that fit
           my clients unique brand identity. My solutions aim to use agility and
           beauty to enhance functionality.<br /><br /> With all of life's complex
