@@ -12,6 +12,9 @@ const ContactForm = styled.form`
   margin: auto;
   justify-content: center;
   z-index: 1;
+  @media (max-width: 690px) {
+    width: 95%;
+  }
   &::before {
     content: "";
     background-color: var(--elevation4);
@@ -25,6 +28,9 @@ const ContactForm = styled.form`
   .flex {
     display: flex;
     gap: 16px;
+    @media (max-width: 690px) {
+      flex-direction: column;
+    }
   }
 
   .inputWrapper {
@@ -62,6 +68,19 @@ const ContactForm = styled.form`
     z-index: 1;
     color: white;
     align-self: flex-end;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    font-family: "Poppins";
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    @media (max-width: 690px) {
+      width: 100%;
+    }
     &::before {
       content: "";
       background-color: var(--elevation5);

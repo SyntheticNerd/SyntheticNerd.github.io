@@ -71,8 +71,8 @@ const skills = [
 ];
 
 let myClassObject;
-const set1 = {"--myVariables" : "translateX(80px)"}
-const set2 = {"--myVariables" : "translateX(80px)"}
+const set1 = { "--myVariables": "translateX(80px)" };
+const set2 = { "--myVariables": "translateX(80px)" };
 
 export default function About() {
   return (
@@ -80,24 +80,22 @@ export default function About() {
       <GoldContainer>
         <AboutMe className={myClassObject}>
           Hello, I'm Andrew, a digital creative, web developer, ux designer, and
-          game developer. I create tailor-made digital solutions that fit my
-          clients unique brand identity. My solutions aim to use agility and
-          beauty to enhance functionality. With all of life's complex
+          game developer. <br /><br />I create tailor-made digital solutions that fit
+          my clients unique brand identity. My solutions aim to use agility and
+          beauty to enhance functionality.<br /><br /> With all of life's complex
           challenges, technology should serve to amplify reality making life
-          simpler and more enjoyable. My approach to development embodies these
-          ideals in the constant endeavor to fuse aesthetic beauty with
-          straightforward functionality.
+          simpler and more enjoyable. <br /><br />My approach to development embodies these
+          ideals in a constant endeavor to fuse aesthetic beauty with functionality.
         </AboutMe>
       </GoldContainer>
       <GoldContainer>
-        <MySkills >
+        <MySkills>
           <h1>Skills</h1>
           {skills.map((skill) => (
             <li>{skill}</li>
           ))}
         </MySkills>
       </GoldContainer>
-      
     </AboutWrapper>
   );
 }
