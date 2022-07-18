@@ -152,6 +152,7 @@ export default function PortfolioGrid() {
           onMouseUp={handleClick}
           onDrag={() => setWasDrag(true)}
           dragMomentum={false}
+          snapToCursor={true}
         >
           <img src={process.env.PUBLIC_URL + "/icons/info-icon.svg"} alt='' />
         </motion.button>
