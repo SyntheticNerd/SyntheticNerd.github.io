@@ -17,7 +17,7 @@ export const PortfolioGridContainer = styled.div`
   position: relative;
   margin-bottom: 64px;
 
-  grid-template-columns: 90%;
+  grid-template-columns: 100%;
   grid-template-rows: 140vw 60vw 60vw 180vw 140vw 120vw 120vw;
   grid-template-areas:
     "ts"

@@ -150,7 +150,7 @@ export default function PortfolioGrid() {
           drag={true}
           dragConstraints={frameRef}
           onMouseUp={handleClick}
-          onDragCapture={() => setWasDrag(true)}
+          onDrag={() => setWasDrag(true)}
           dragMomentum={false}
         >
           <img src={process.env.PUBLIC_URL + "/icons/info-icon.svg"} alt='' />
