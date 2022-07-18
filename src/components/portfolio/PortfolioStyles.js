@@ -11,14 +11,13 @@ export const PortfolioPage = styled.div`
 
 export const PortfolioGridContainer = styled.div`
   display: grid;
-
-  gap: 24px;
-  width: min-content;
+  gap: 64px;
+  width: 90%;
   z-index: 1;
   position: relative;
   margin-bottom: 64px;
 
-  grid-template-columns: 90vw;
+  grid-template-columns: 90%;
   grid-template-rows: 140vw 60vw 60vw 180vw 140vw 120vw 120vw;
   grid-template-areas:
     "ts"
@@ -30,7 +29,7 @@ export const PortfolioGridContainer = styled.div`
     "st";
 
   @media (min-width: 490px) {
-    grid-template-columns: 90vw;
+    grid-template-columns: 100%;
     grid-template-rows: 80vh 40vw 40vw 80vw 120vw 120vw 120vw;
     grid-template-areas:
       "ts"
@@ -43,8 +42,8 @@ export const PortfolioGridContainer = styled.div`
   }
 
   @media (min-width: 750px) {
-    grid-template-columns: repeat(6, 13vw);
-    grid-template-rows: repeat(18, 13vw);
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(19, 13vw);
     grid-template-areas:
       "ts ts ts ts ts ts"
       "ts ts ts ts ts ts"
@@ -53,7 +52,6 @@ export const PortfolioGridContainer = styled.div`
       "ka ka ka ka ka ka"
       "ka ka ka ka ka ka"
       "ka ka ka ka ka ka"
-      "ka ka ka ka ka ka"
       "sc sc sc sc sc sc"
       "sc sc sc sc sc sc"
       "sc sc sc sc sc sc"
@@ -61,13 +59,14 @@ export const PortfolioGridContainer = styled.div`
       "eb eb eb dg dg dg"
       "eb eb eb dg dg dg"
       "eb eb eb dg dg dg"
+      "te te te te st st"
       "te te te te st st"
       "te te te te st st"
       "te te te te st st";
   }
 
   @media (min-width: 1080px) {
-    grid-template-columns: repeat(6, 13vw);
+    grid-template-columns: repeat(6, auto);
     grid-template-rows: repeat(14, 13vw);
     grid-template-areas:
       "ts ts ts ts ts ts"
@@ -82,18 +81,17 @@ export const PortfolioGridContainer = styled.div`
       "eb eb dg dg te te"
       "eb eb dg dg te te"
       "eb eb dg dg te te"
-      "st st st st te te"
+      "st st st st . ."
       "st st st st . .";
   }
 
   @media (min-width: 1200px) {
-    grid-template-columns: repeat(6, 13vw);
+    grid-template-columns: repeat(6, auto);
     grid-template-rows: repeat(11, 13vw);
     grid-template-areas:
       "ts ts ts ts ts ts"
       "ts ts ts ts ts ts"
       "ts ts ts ts ts ts"
-      "ka ka ka ka te te"
       "ka ka ka ka te te"
       "ka ka ka ka te te"
       "sc sc sc sc te te"
@@ -116,7 +114,7 @@ export const PortfolioGridContainer = styled.div`
       "st st st dg dg eb eb"
       ". . . dg dg eb eb"
       ". . . dg dg eb eb";
-    grid-template-columns: repeat(7, 10vw);
+    grid-template-columns: repeat(7, auto);
     grid-template-rows: repeat(11, 10vw);
   }
 `;

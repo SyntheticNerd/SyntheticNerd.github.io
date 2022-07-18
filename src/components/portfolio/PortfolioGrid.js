@@ -132,12 +132,12 @@ export default function PortfolioGrid() {
           }
         }}
       >
-        <div className='grid-info-container'>
+        {/* <div className='grid-info-container'>
           <button className='info-grid-close-btn'>
             <div className='line1'></div>
             <div className='line2'></div>
           </button>
-        </div>
+        </div> */}
 
         <motion.button
           drag={true}
