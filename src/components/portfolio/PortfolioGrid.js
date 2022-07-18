@@ -33,8 +33,8 @@ const InformationWrap = styled.div`
     height: 48px;
     width: 48px;
     z-index: 2;
-    top: 32px;
-    right: 32px;
+    top: 8px;
+    right: 8px;
     border-radius: 50%;
     border: none;
     background-image: var(--gold-gradient);
@@ -62,12 +62,15 @@ const InformationWrap = styled.div`
     left: 0;
     z-index: 3;
     backdrop-filter: blur(8px);
+    opacity: ${({ openInfo }) => (openInfo ? "1" : "0")};
+    pointer-events: ${({ openInfo }) => (openInfo ? "auto" : "none")};
+
     .info-grid-close-btn {
       display: flex;
       justify-content: center;
       align-items: center;
-      right: 4px;
-      top: 4px;
+      right: 8px;
+      top: 8px;
       div {
         height: 50%;
         width: 4px;
@@ -131,13 +134,17 @@ export default function PortfolioGrid() {
             clearTimeout(toId);
           }
         }}
+        openInfo={openInfo}
       >
-        {/* <div className='grid-info-container'>
-          <button className='info-grid-close-btn'>
+        <div className='grid-info-container'>
+          <button
+            className='info-grid-close-btn'
+            onClick={() => setOpenInfo(false)}
+          >
             <div className='line1'></div>
             <div className='line2'></div>
           </button>
-        </div> */}
+        </div>
 
         <motion.button
           drag={true}
