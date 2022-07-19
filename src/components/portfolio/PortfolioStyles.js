@@ -106,7 +106,7 @@ export const PortfolioGridContainer = styled.div`
       "ts ts ts ts ts ts ts"
       "ts ts ts ts ts ts ts"
       "ts ts ts ts ts ts ts"
-      "ka ka ka ka te te te"
+      /* "ka ka ka ka te te te" */
       "ka ka ka ka te te te"
       "ka ka ka ka te te te"
       "st st st sc sc sc sc"

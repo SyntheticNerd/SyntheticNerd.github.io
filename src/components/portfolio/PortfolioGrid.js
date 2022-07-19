@@ -55,7 +55,7 @@ const InformationWrap = styled.div`
   }
   .grid-info-container {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     height: 100%;
     width: 100%;
     top: 0;
@@ -64,7 +64,8 @@ const InformationWrap = styled.div`
     backdrop-filter: blur(8px);
     opacity: ${({ openInfo }) => (openInfo ? "1" : "0")};
     pointer-events: ${({ openInfo }) => (openInfo ? "auto" : "none")};
-
+    text-align: left;
+    padding: 16px;
     .info-grid-close-btn {
       display: flex;
       justify-content: center;
@@ -95,7 +96,23 @@ export default function PortfolioGrid() {
       : false
   );
 
-  const InformationProvider = ({ children }) => {
+  let kaConstructionInfo = (
+    <>
+      <h1>KA Construction</h1>
+      <p>
+        This was a collaboration project between an apprentice UX designer and
+        myself.
+      </p>
+      <ul>
+        <h2>Built with</h2>
+        <li>React</li>
+        <li>Styled Components</li>
+        <li>React Scroll Parallax</li>
+      </ul>
+    </>
+  );
+
+  const InformationProvider = ({ infoComponent, children }) => {
     const frameRef = useRef();
     const [wasDrag, setWasDrag] = useState(false);
     const [openInfo, setOpenInfo] = useState(false);
@@ -136,26 +153,33 @@ export default function PortfolioGrid() {
         }}
         openInfo={openInfo}
       >
-        <div className='grid-info-container'>
-          <button
-            className='info-grid-close-btn'
-            onClick={() => setOpenInfo(false)}
-          >
-            <div className='line1'></div>
-            <div className='line2'></div>
-          </button>
-        </div>
-
-        <motion.button
-          drag={true}
-          dragConstraints={frameRef}
-          onMouseUp={handleClick}
-          onDrag={() => setWasDrag(true)}
-          dragMomentum={false}
-          snapToCursor={true}
-        >
-          <img src={process.env.PUBLIC_URL + "/icons/info-icon.svg"} alt='' />
-        </motion.button>
+        {infoComponent && (
+          <>
+            <div className='grid-info-container'>
+              <button
+                className='info-grid-close-btn'
+                onClick={() => setOpenInfo(false)}
+              >
+                <div className='line1'></div>
+                <div className='line2'></div>
+              </button>
+              {infoComponent}
+            </div>
+            <motion.button
+              drag={true}
+              dragConstraints={frameRef}
+              onMouseUp={handleClick}
+              onDrag={() => setWasDrag(true)}
+              dragMomentum={false}
+              snapToCursor={true}
+            >
+              <img
+                src={process.env.PUBLIC_URL + "/icons/info-icon.svg"}
+                alt=''
+              />
+            </motion.button>{" "}
+          </>
+        )}
         {children}
       </InformationWrap>
     );
@@ -169,7 +193,7 @@ export default function PortfolioGrid() {
         </InformationProvider>
       </GridContainer1A>
       <GridContainer1>
-        <InformationProvider>
+        <InformationProvider infoComponent={kaConstructionInfo}>
           <KAConstruction />
         </InformationProvider>
       </GridContainer1>
