@@ -5,7 +5,7 @@ export const NavBarCont = styled.nav`
   top: 0;
   background: var(--elevation4);
   height: fit-content;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   height: 4em;
@@ -14,7 +14,6 @@ export const NavBarCont = styled.nav`
   margin-bottom: 16px;
   z-index: 5;
 `;
-
 
 export const NavFolder = styled.div`
   display: flex;

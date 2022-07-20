@@ -177,7 +177,7 @@ export default function PortfolioGrid() {
                 src={process.env.PUBLIC_URL + "/icons/info-icon.svg"}
                 alt=''
               />
-            </motion.button>{" "}
+            </motion.button>
           </>
         )}
         {children}
