@@ -125,6 +125,8 @@ const InformationWrap = styled.div`
     }
   }
   .grid-info-container {
+    overflow-y: scroll;
+
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
     height: 100%;
