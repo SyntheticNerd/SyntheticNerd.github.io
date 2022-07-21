@@ -226,7 +226,6 @@ export default function PortfolioGrid() {
               onDrag={() => setWasDrag(true)}
               dragMomentum={false}
               snapToCursor={true}
-              animateHelp={animateHelp}
               className='portfolio-info-btn'
               dragPropagation
             >

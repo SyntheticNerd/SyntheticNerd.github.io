@@ -124,7 +124,7 @@ export default function Contact() {
         <div className='inputWrapper'>
           <textarea
             placeholder='Your Message'
-            class='form-control'
+            className='form-control'
             name='message'
             rows='10'
             required

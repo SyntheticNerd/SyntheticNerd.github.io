@@ -11,7 +11,6 @@ export default function Home() {
   const params = useParams();
 
   useEffect(() => {
-    console.log(params);
     scroller.scrollTo(params.navigate, {
       duration: 800,
       delay: 0,

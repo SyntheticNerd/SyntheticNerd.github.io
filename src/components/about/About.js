@@ -92,7 +92,7 @@ export default function About() {
         <MySkills>
           <h1>Skills</h1>
           {skills.map((skill) => (
-            <li>{skill}</li>
+            <li key={skill}>{skill}</li>
           ))}
         </MySkills>
       </GoldContainer>

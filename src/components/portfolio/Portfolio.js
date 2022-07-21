@@ -11,7 +11,6 @@ export default function Portfolio() {
   const [modal, setModal] = useState(false);
   const { projectId } = useParams();
   useEffect(() => {
-    console.log(projectId);
     projectId && setModal(true);
     !projectId && setModal(false);
   }, [projectId]);
