@@ -237,6 +237,7 @@ export default function PortfolioGrid() {
               snapToCursor={true}
               animateHelp={animateHelp}
               className='portfolio-info-btn'
+              dragPropagation
             >
               <div className='portfolio-info-helper'>
                 If I am in your way you can drag me somewhere else
