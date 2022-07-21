@@ -71,11 +71,6 @@ const InformationWrap = styled.div`
       background-color: var(--elevation5);
     }
   }
-  .portfolio-info-btn {
-    transition: height width 0.3s;
-    height: ${({ wasDrag }) => (wasDrag ? "100px" : "48px")};
-    width: ${({ wasDrag }) => (wasDrag ? "100px" : "48px")};
-  }
   .portfolio-info-helper {
     position: absolute;
     background-image: var(--gold-gradient);
@@ -172,10 +167,6 @@ export default function PortfolioGrid() {
     const [openInfo, setOpenInfo] = useState(false);
     const [animateHelp, setAnimateHelp] = useState(false);
     const [toId, setToId] = useState();
-
-    useEffect(() => {
-      console.log(wasDrag);
-    }, [wasDrag]);
 
     const handleMouseOver = () => {
       if (
