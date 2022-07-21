@@ -22,6 +22,8 @@ export const Goldh1 = styled.h1`
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-gradient)
   /* font-weight: 400; */
   /* text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.8); */
 `;

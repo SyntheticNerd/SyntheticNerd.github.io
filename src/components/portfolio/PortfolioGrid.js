@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { motion } from "framer-motion";
 import {
   GridContainer1,
@@ -15,10 +15,28 @@ import {
 import Magic8Ball from "./projects/magic-8-ball/Magic8Ball";
 import TetrisProject from "./projects/tetris/TetrisProject";
 import ReactStoreApi from "./projects/react-store-api/ReactStoreApi";
-import KAConstruction from "./projects/ka-construction/KAConstruction";
+import KAConstruction, {
+  kaConstructionInfo,
+} from "./projects/ka-construction/KAConstruction";
 import SteamClone from "./projects/steam-clone/SteamClone";
 import Dngn from "./projects/dngn-bynder/Dngn";
-import TeslaShop from "./projects/tesla-shop/TeslaShop";
+import TeslaShop, { teslaInfo } from "./projects/tesla-shop/TeslaShop";
+
+const showInfoHelp = keyframes`
+  10%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+`;
+
+const animateMixin = css`
+  animation: ${showInfoHelp} 6s linear 1;
+`;
 
 const InformationWrap = styled.div`
   position: relative;
@@ -51,6 +69,47 @@ const InformationWrap = styled.div`
       position: absolute;
       z-index: -1;
       background-color: var(--elevation5);
+    }
+  }
+  .portfolio-info-helper {
+    position: absolute;
+    background-image: var(--gold-gradient);
+    height: fit-content;
+    width: 200px;
+    color: white;
+    z-index: 0;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    right: -19px;
+    top: -20px;
+    transform: translateY(-100%);
+    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    opacity: 0;
+    pointer-events: none;
+    ${({ animateHelp }) => animateHelp && animateMixin};
+    &::before {
+      content: "";
+      height: calc(100% - 4px);
+      width: calc(100% - 4px);
+      top: 2px;
+      left: 2px;
+      position: absolute;
+      z-index: -1;
+      background-color: var(--elevation5);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      background-color: var(--elevation5);
+      transform: rotate(45deg);
+      right: 32px;
+      bottom: -10px;
+      border-bottom: 2px solid #aa771c;
+      border-right: 2px solid #aa771c;
     }
   }
   .grid-info-container {
@@ -86,32 +145,21 @@ const InformationWrap = styled.div`
         transform: rotate(-45deg);
       }
     }
+    a {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: underline;
+      text-decoration-color: white;
+    }
+    ul {
+      padding-left: 16px;
+    }
   }
 `;
 
 export default function PortfolioGrid() {
-  const [firstMouseOver, setFirstMouseOver] = useState(
-    window.sessionStorage.getItem("gridFirstMouseOver")
-      ? window.sessionStorage.getItem("gridFirstMouseOver")
-      : false
-  );
-
-  let kaConstructionInfo = (
-    <>
-      <h1>KA Construction</h1>
-      <p>
-        This was a collaboration project between an apprentice UX designer and
-        myself.
-      </p>
-      <ul>
-        <h2>Built with</h2>
-        <li>React</li>
-        <li>Styled Components</li>
-        <li>React Scroll Parallax</li>
-      </ul>
-    </>
-  );
-
   const InformationProvider = ({ infoComponent, children }) => {
     const frameRef = useRef();
     const [wasDrag, setWasDrag] = useState(false);
@@ -120,7 +168,10 @@ export default function PortfolioGrid() {
     const [toId, setToId] = useState();
 
     const handleMouseOver = () => {
-      if (!window.sessionStorage.getItem("gridFirstMouseOver")) {
+      if (
+        !window.sessionStorage.getItem("gridFirstMouseOver") &&
+        infoComponent
+      ) {
         const timer = setTimeout(() => {
           setAnimateHelp(true);
           window.sessionStorage.setItem("gridFirstMouseOver", true);
@@ -172,7 +223,12 @@ export default function PortfolioGrid() {
               onDrag={() => setWasDrag(true)}
               dragMomentum={false}
               snapToCursor={true}
+              animateHelp={animateHelp}
+              className='portfolio-info-btn'
             >
+              <div className='portfolio-info-helper'>
+                If I am in your way you can drag me somewhere else
+              </div>
               <img
                 src={process.env.PUBLIC_URL + "/icons/info-icon.svg"}
                 alt=''
@@ -188,7 +244,7 @@ export default function PortfolioGrid() {
   return (
     <PortfolioGridContainer>
       <GridContainer1A>
-        <InformationProvider>
+        <InformationProvider infoComponent={teslaInfo}>
           <TeslaShop />
         </InformationProvider>
       </GridContainer1A>
