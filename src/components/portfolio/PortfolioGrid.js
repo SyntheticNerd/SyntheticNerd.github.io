@@ -71,17 +71,10 @@ const InformationWrap = styled.div`
       background-color: var(--elevation5);
     }
   }
-  .portfolio-info-btn:hover {
-    &::after {
-      content: "";
-      height: 400%;
-      width: 400%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -2;
-    }
+  .portfolio-info-btn {
+    transition: height width 0.3s;
+    height: ${({ wasDrag }) => (wasDrag ? "100px" : "48px")};
+    width: ${({ wasDrag }) => (wasDrag ? "100px" : "48px")};
   }
   .portfolio-info-helper {
     position: absolute;
@@ -126,7 +119,6 @@ const InformationWrap = styled.div`
   }
   .grid-info-container {
     overflow-y: scroll;
-
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
     height: 100%;
@@ -181,6 +173,10 @@ export default function PortfolioGrid() {
     const [animateHelp, setAnimateHelp] = useState(false);
     const [toId, setToId] = useState();
 
+    useEffect(() => {
+      console.log(wasDrag);
+    }, [wasDrag]);
+
     const handleMouseOver = () => {
       if (
         !window.sessionStorage.getItem("gridFirstMouseOver") &&
@@ -217,6 +213,7 @@ export default function PortfolioGrid() {
           }
         }}
         openInfo={openInfo}
+        wasDrag={wasDrag}
       >
         {infoComponent && (
           <>
@@ -230,8 +227,9 @@ export default function PortfolioGrid() {
               </button>
               {infoComponent}
             </div>
+            
             <motion.button
-              drag={true}
+              drag
               dragConstraints={frameRef}
               onMouseUp={handleClick}
               onDrag={() => setWasDrag(true)}
