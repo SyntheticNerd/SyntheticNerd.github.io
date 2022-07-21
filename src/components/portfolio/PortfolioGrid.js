@@ -71,6 +71,18 @@ const InformationWrap = styled.div`
       background-color: var(--elevation5);
     }
   }
+  .portfolio-info-btn:hover {
+    &::after {
+      content: "";
+      height: 400%;
+      width: 400%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -2;
+    }
+  }
   .portfolio-info-helper {
     position: absolute;
     background-image: var(--gold-gradient);
