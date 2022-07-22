@@ -9,7 +9,7 @@ export const FourCardFeatureCont = styled.div`
   padding: 32px 16px;
   background-color: #101010;
   /* height: 100%; */
-  max-height: fit-content;
+  height: fit-content;
   position: relative;
   width: 1440px;
   ${({ theme }) =>

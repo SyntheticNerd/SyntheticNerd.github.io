@@ -62,7 +62,7 @@ const ContactForm = styled.form`
     background-image: var(--gold-gradient);
     border: none;
     padding: 16px 80px;
-    border-radius: 80px;
+    border-radius: 8px;
     width: fit-content;
     position: relative;
     z-index: 1;
@@ -78,6 +78,10 @@ const ContactForm = styled.form`
       transform: translateY(-4px);
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     }
+    &:active{
+      transform: translateY(0px);
+      box-shadow: none;
+    }
     @media (max-width: 690px) {
       width: 100%;
     }
@@ -90,7 +94,7 @@ const ContactForm = styled.form`
       top: 4px;
       left: 4px;
       z-index: -1;
-      border-radius: 80px;
+      border-radius: 8px;
     }
   }
   h1 {

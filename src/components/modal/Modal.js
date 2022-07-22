@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { ChildWrapper, ModBox, ModBG } from "./ModalStyles";
+import { ChildWrapper, ModBox, ModBG, CloseBtn } from "./ModalStyles";
 
 export default function Modal({
   modal,
@@ -49,6 +49,10 @@ export default function Modal({
         height={height}
       />
       <ChildWrapper>{children}</ChildWrapper>
+      <CloseBtn onClick={() => navigate(-1)}>
+        <div className='line1'></div>
+        <div className='line2'></div>
+      </CloseBtn>
     </ModBox>
   );
 }

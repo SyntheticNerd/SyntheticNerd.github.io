@@ -6,17 +6,25 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Element as ScrollElement, scroller } from "react-scroll";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 
 export default function Home() {
   const params = useParams();
+  const [projectVisited, setProjectVisited] = useState(false);
 
   useEffect(() => {
-    scroller.scrollTo(params.navigate, {
-      duration: 800,
-      delay: 0,
-      smooth: "ease",
-      offset: -64,
-    });
+    if (params.projectId) {
+      setProjectVisited(true);
+    } else if (projectVisited) {
+      setProjectVisited(false);
+    } else {
+      scroller.scrollTo(params.navigate, {
+        duration: 800,
+        delay: 0,
+        smooth: "ease",
+        offset: -64,
+      });
+    }
   }, [params]);
   return (
     <>

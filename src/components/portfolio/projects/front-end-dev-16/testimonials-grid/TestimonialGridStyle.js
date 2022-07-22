@@ -78,7 +78,7 @@ export const GridChild = styled.div`
         border-radius: 8px;
         background-image: url(${
           process.env.PUBLIC_URL +
-          "/testimonial-grid-images/bg-pattern-quotation.svg"
+          "dev16Images/testimonial-grid-images/bg-pattern-quotation.svg"
         });
         background-repeat: no-repeat;
         background-position-x: 80%;
