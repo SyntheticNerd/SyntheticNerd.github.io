@@ -32,7 +32,7 @@ export default function Nav() {
   //event hooks are removed when the nav is closed
   useEffect(() => {
     setFrames(document.getElementsByTagName("iframe"));
-    var iframeDetector = {
+    let iframeDetector = {
       iframeMouseOver: false,
     };
     function hideOnClickOutside(element) {

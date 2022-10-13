@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ReactComponent as GithubIcon } from "../../../../icons/gitHubIcon.svg";
 
 const TeslaShopFrame = styled.iframe`
   height: 125%;
@@ -38,10 +39,12 @@ export const teslaInfo = (
       <li>Redux(redux/toolkit)</li>
     </ul>
     <h2>
-      <a href='https://syntheticdesigner.github.io/tesla-group-project/'>
+      <a href='https://syntheticnerd.github.io/tesla-group-project/'>
         Click here to see the full website
       </a>
     </h2>
+    <a href=""></a>
+    <GithubIcon />
   </>
 );
 
@@ -49,7 +52,7 @@ export default function KAConstruction() {
   return (
     <TeslaShopFrame
       title='test'
-      src='https://syntheticdesigner.github.io/tesla-group-project/'
+      src='https://syntheticnerd.github.io/tesla-group-project/'
       id='teslaShopFrame'
     />
   );

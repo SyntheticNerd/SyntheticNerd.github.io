@@ -61,10 +61,6 @@ export default function Dev16Carousel({ links }) {
     setScrollTimeOut(wheelTime);
   };
 
-  // useEffect(() => {
-  //   scrollArea.current.addEventListener("wheel", handleScrollWheel);
-  // });
-
   //grabs the width of the carousel container and sets a scroll amount based on a fraction of that width.
   const moveArrRight = () => {
     const scrollWidth = scrollArea.current.offsetWidth * 0.67;
